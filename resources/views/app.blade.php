@@ -32,7 +32,7 @@
 
     .form-container-main {
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      place-items:left;
       width: 300px;
     }
 
@@ -42,16 +42,41 @@
 
     }
 
-    .form-main .logo {
+   .logo {
       width: 150px;
       margin-bottom: 20px;
       justify-self: center;
     }
-
     .title {
        font-size: var(--lg);
       margin-bottom: 12px;
       text-align: center;
+    }
+    label{
+    font-size: var(--sm);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    input {
+      background-color: var(--text-input-field);
+      border: none;
+      border-radius: 8px;
+      height: 30px;
+      font-size: var(--md);
+      padding: 6px;
+      margin-bottom: 12px;
+    }
+
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
     }
   </style>
   <title>Document</title>
@@ -59,12 +84,11 @@
 
 <body>
   <div class="main">
-    <div class=".form-container-main ">
-      <form class="form-main" action="/">
-        <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
-        <h1 class="title">Datos Generales</h1>
+    <div class="form-container-main">
+    <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
 
-        <div class="form-skills">
+      <form class="form-main" action="/">
+        <h1 class="title">Datos Generales</h1>
           <label for="RUC">RUC:</label>
           <input type="text" class="form-control" id="RUC">
           <label for="RZS">Razon Social:</label>
@@ -75,8 +99,7 @@
           <input type="text" class="form-control" id="NDC">
           <label for="DCN">Direccion:</label>
           <input type="text" class="form-control" id="DCN">
-          <button class="envio-de-datos" action="submit">Aceptar</button>
-        </div>
+          <button class="primary-button" action="submit">Aceptar</button>
         <form>
     </div>
   </div>

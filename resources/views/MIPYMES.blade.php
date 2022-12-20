@@ -42,24 +42,29 @@
       grid-template-columns: 1fr 1fr;
       gap: 25px;
     }
-    .form-main .left{
-      display:flex;
+
+    .form-main .left {
+      display: flex;
       flex-direction: column;
     }
-    .form-main .right{
-      display:flex;
+
+    .form-main .right {
+      display: flex;
       flex-direction: column;
     }
-   .logo {
+
+    .logo {
       width: 250px;
       margin-bottom: 20px;
       justify-self: center;
     }
+
     .title {
       font-size: var(--lg);
       margin-bottom: 12px;
       text-align: center;
     }
+
     .subtitle {
       color: black;
       font-size: 25px;
@@ -68,11 +73,13 @@
       margin-bottom: 32px;
       text-align: left;
     }
-    label{
-    font-size: var(--sm);
+
+    label {
+      font-size: var(--sm);
       font-weight: bold;
       margin-bottom: 4px;
     }
+
     input {
       background-color: var(--text-input-field);
       border: none;
@@ -95,7 +102,8 @@
       height: 50px;
       margin-top: 25px;
     }
-    .combo{
+
+    .combo {
       background-color: var(--text-input-field);
       border: none;
       border-radius: 8px;
@@ -104,14 +112,16 @@
       padding: 6px;
       margin-bottom: 12px;
     }
-    .espacio{
+
+    .espacio {
       margin-top: 60px;
     }
+
     @media (max-width: 640px) {
       .form-container-main .form-main {
-      display: flex;
-      flex-direction: column;
-    }
+        display: flex;
+        flex-direction: column;
+      }
     }
   </style>
   <title>Document</title>
@@ -120,31 +130,31 @@
 <body>
   <div class="main">
     <div class="form-container-main">
-    <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
-    <h1 class="title">MIPYMES</h1>
-    <h2 class="subtitle">Datos Generales</h1>
-      <form class="form-main" action="/">
-        <div class="left">
-          <label for="RUC">RUC:</label>
-          <input type="text" class="form-control" id="RUC">
-          <label for="RZS">Razon Social:</label>
-          <input type="text" class="form-control" id="RZS">
-          <label for="NBC">Nombre Comercial:</label>
-          <input type="text" class="form-control" id="NBC">
-          <label for="NDC">Numeros de Colaboradores:</label>
-          <input type="text" class="form-control" id="NDC">
-          <label for="FGA">Formación del gerente o administrador:</label>
-          <select  class="combo" name="optionlist " onChange="combo(this, 'demo')" >
+      <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
+      <h1 class="title">MIPYMES</h1>
+      <h2 class="subtitle">Datos Generales</h1>
+        <form class="form-main" action="/">
+          <div class="left">
+            <label for="RUC">RUC:</label>
+            <input type="text" class="form-control" id="RUC">
+            <label for="RZS">Razon Social:</label>
+            <input type="text" class="form-control" id="RZS">
+            <label for="NBC">Nombre Comercial:</label>
+            <input type="text" class="form-control" id="NBC">
+            <label for="NDC">Numeros de Colaboradores:</label>
+            <input type="text" class="form-control" id="NDC">
+            <label for="FGA">Formación del gerente o administrador:</label>
+            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
               <option value="Primaria">Primaria</option>
               <option value="Secundaria">Secundaria</option>
               <option value="Tercer Nivel">Tercer Nivel</option>
               <option value="Maestria">Maestria</option>
               <option value="Doctorado">Doctorado</option>
             </select>
-          <label for="DCN">Direccion:</label>
-          <input type="text" class="form-control" id="DCN">
-          <label for="CEO">Correo Electronico:</label>
-          <input type="text" class="form-control" id="CEO">
+            <label for="DCN">Direccion:</label>
+            <input type="text" class="form-control" id="DCN">
+            <label for="CEO">Correo Electronico:</label>
+            <input type="text" class="form-control" id="CEO">
           </div>
           <div class="right">
             <label for="PRV">Provincia:</label>
@@ -161,9 +171,9 @@
             <input type="text" class="form-control" id="GRT">
           </div>
           <div class="left">
-          <h1 class="subtitle">Actividad Comercial y Categorías</h1>
-          <label for="LGO">Logo:</label>
-          <select  class="combo" name="optionlist " onChange="combo(this, 'demo')" >
+            <h1 class="subtitle">Actividad Comercial y Categorías</h1>
+            <label for="LGO">Logo:</label>
+            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
@@ -172,7 +182,7 @@
             <label for="FIN">Fecha de inicio negocio:</label>
             <input type="text" class="form-control" id="FIN">
             <label for="CGA">Categoria:</label>
-          <select  class="combo" name="optionlist " onChange="combo(this, 'demo')" >
+            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
               <option value="Comercio">Comercio</option>
               <option value="Servicio">Servicio</option>
               <option value="Industrias">Industrias</option>
@@ -182,50 +192,51 @@
           </div>
           <div class="right">
             <label class="espacio" for="POS">Productos o servicios:</label>
-            <select  class="combo" name="optionlist " onChange="combo(this, 'demo')" >
+            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
             <label for="POS">Producto de comercio justo:</label>
-            <select  class="combo" name="optionlist " onChange="combo(this, 'demo')" >
+            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
             <label for="POS">Comercio exterior:</label>
-            <select  class="combo" name="optionlist " onChange="combo(this, 'demo')" >
+            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
           </div>
 
           <div class="left">
-          <h1 class="subtitle">Localización georeferenciada</h1>
-          <label for="CDS">Cordenadas:</label>
-          <input type="text" class="form-control" id="CDS">
+            <h1 class="subtitle">Localización georeferenciada</h1>
+            <label for="CDS">Cordenadas:</label>
+            <input type="text" class="form-control" id="CDS">
           </div>
           <div class="right">
-          <label class="espacio" for="IMG">Imagen:</label>
-          <input type="text" class="form-control" id="CDS">
+            <label class="espacio" for="IMG">Imagen:</label>
+            <input type="text" class="form-control" id="CDS">
           </div>
 
           <div class="left">
-          <h1 class="subtitle">Información Tecnológica</h1>
-          <label for="CEC">Comercio Electrónico:</label>
-          <input type="text" class="form-control" id="CEC">
-          <label for="RCN">Requiere Capacitaciones:</label>
-          <input type="text" class="form-control" id="RCN">
-          <label for="PWB">Página web:</label>
-          <input type="text" class="form-control" id="PWB">
+            <h1 class="subtitle">Información Tecnológica</h1>
+            <label for="CEC">Comercio Electrónico:</label>
+            <input type="text" class="form-control" id="CEC">
+            <label for="RCN">Requiere Capacitaciones:</label>
+            <input type="text" class="form-control" id="RCN">
+            <label for="PWB">Página web:</label>
+            <input type="text" class="form-control" id="PWB">
           </div>
           <div class="right">
-          <label class="espacio" for="RSS">Redes Sociales:</label>
-          <input type="text" class="form-control" id="RSS">
-          <label for="WTP">Whatsapp:</label>
-          <input type="text" class="form-control" id="WTP">
-          <button class="primary-button" action="submit">Aceptar</button>
+            <label class="espacio" for="RSS">Redes Sociales:</label>
+            <input type="text" class="form-control" id="RSS">
+            <label for="WTP">Whatsapp:</label>
+            <input type="text" class="form-control" id="WTP">
+            <button class="primary-button" action="submit">Aceptar</button>
           </div>
-        <form>
+          <form>
     </div>
   </div>
 </body>
+
 </html>

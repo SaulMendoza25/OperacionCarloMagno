@@ -30,9 +30,15 @@
       place-items: center;
     }
 
-    .main .form-main {
+    .form-container-main {
       display: grid;
+      grid-template-rows: auto 1fr auto;
       width: 300px;
+    }
+
+    .form-container-main .form-main {
+      display: flex;
+      flex-direction: column;
 
     }
 
@@ -42,32 +48,38 @@
       justify-self: center;
     }
 
-    .title {}
+    .title {
+       font-size: var(--lg);
+      margin-bottom: 12px;
+      text-align: center;
+    }
   </style>
   <title>Document</title>
 </head>
 
 <body>
   <div class="main">
-    <form class="form-main" action="/">
-      <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
-      <h1 class="title">Datos Generales</h1>
+    <div class=".form-container-main ">
+      <form class="form-main" action="/">
+        <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
+        <h1 class="title">Datos Generales</h1>
 
-      <div class="form-skills">
-        <label for="RUC">RUC:</label>
-        <input type="text" class="form-control" id="RUC">
-        <label for="RZS">Razon Social:</label>
-        <input type="text" class="form-control" id="RZS">
-        <label for="NBC">Nombre Comercial:</label>
-        <input type="text" class="form-control" id="NBC">
-        <label for="NDC">Numeros de Colaboradores:</label>
-        <input type="text" class="form-control" id="NDC">
-        <label for="DCN">Direccion:</label>
-        <input type="text" class="form-control" id="DCN">
-        <button class="envio-de-datos" action="submit">Aceptar</button>
-      </div>
+        <div class="form-skills">
+          <label for="RUC">RUC:</label>
+          <input type="text" class="form-control" id="RUC">
+          <label for="RZS">Razon Social:</label>
+          <input type="text" class="form-control" id="RZS">
+          <label for="NBC">Nombre Comercial:</label>
+          <input type="text" class="form-control" id="NBC">
+          <label for="NDC">Numeros de Colaboradores:</label>
+          <input type="text" class="form-control" id="NDC">
+          <label for="DCN">Direccion:</label>
+          <input type="text" class="form-control" id="DCN">
+          <button class="envio-de-datos" action="submit">Aceptar</button>
+        </div>
+        <form>
+    </div>
   </div>
-  <form>
 </body>
 
 </html>

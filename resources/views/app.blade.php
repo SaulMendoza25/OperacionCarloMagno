@@ -28,6 +28,8 @@
     }
    .main .form-main{
     display: grid;
+    width: 300px;
+
    }
    .form-main .logo{
     width: 150px;

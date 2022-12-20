@@ -42,7 +42,9 @@
       justify-self: center;
     }
 
-    .title {}
+    .title {
+      
+    }
   </style>
   <title>Document</title>
 </head>

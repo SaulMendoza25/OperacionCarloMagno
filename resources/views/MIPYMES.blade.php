@@ -40,7 +40,7 @@
     .form-container-main .form-main {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 25px;
+      column-gap: 50px;
     }
 
     .form-main .left {
@@ -118,10 +118,7 @@
     }
 
     @media (max-width: 640px) {
-      .form-container-main .form-main {
-        display: flex;
-        flex-direction: column;
-      }
+      
     }
   </style>
   <title>Document</title>
@@ -232,7 +229,10 @@
             <input type="text" class="form-control" id="RSS">
             <label for="WTP">Whatsapp:</label>
             <input type="text" class="form-control" id="WTP">
-            <button class="primary-button" action="submit">Aceptar</button>
+          </div>
+          <div></div>
+          <div class="right">
+          <button class="primary-button" action="submit">Aceptar</button>
           </div>
           <form>
     </div>

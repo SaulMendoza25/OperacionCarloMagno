@@ -43,7 +43,7 @@
             <td>{{$value->theme_require_trainings}}</td>
             <td>{{$value->upload_proyect}}</td>
             <td>{{$value->up_image_logo}}</td>
-            <td> <a href="{{url('/emprendimiento/' .$empleado->id. '/edit')}}">Editar</a> | <form action="{{'/emprendimiento/'.$value->id }}" method="post">
+            <td> <a href="{{url('/emprendimiento/' .$value->id. '/edit')}}">Editar</a> | <form action="{{'/emprendimiento/'.$value->id }}" method="post">
             @csrf
             {{method_field('DELETE') }}
             <input type="submit" onclick="return confirm('Deseas realmente borrar?')" value="Borrar">

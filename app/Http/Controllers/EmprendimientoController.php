@@ -25,7 +25,8 @@ class EmprendimientoController extends Controller
      */
     public function create()
     {
-        return view('emprendimiento/create');
+        
+        return view('emprendimiento.create');
         //
     }
 
@@ -77,7 +78,7 @@ class EmprendimientoController extends Controller
     public function edit($id)
     {
         $emprendimiento=emprendimiento::findOrFail($id);
-        return view('emprendimiento/edit' , compact('emprendimiento'));
+        return view('emprendimiento.edit' , compact('emprendimiento'));
     }
 
     /**

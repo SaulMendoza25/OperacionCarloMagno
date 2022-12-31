@@ -31,8 +31,8 @@
               </select>
             <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="form-file LGO-image" id="up_image_logo" value="{{$emprendimiento->up_image_logo}}">
             </div>
-          </div>
-          <div class="right">
+          
+<div class="right">
 
             <label for="main_products">Productos Principales (JPEG/PNG):</label>
             <div class="PRP-DIV">
@@ -50,5 +50,5 @@
             <label for="number_employees">Numero de Empleados:</label>
             <input type="text" name="number_employees" class="form-control" id="number_employees" value="{{$emprendimiento->number_employees}}">
             <input class="primary-button" type="submit" value="Guardar Datos">
-          </div>
         </div>
+</div>

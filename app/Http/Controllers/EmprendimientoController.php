@@ -36,7 +36,8 @@ class EmprendimientoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosemprendimiento = request()->all();
+        return response()->json($datosemprendimiento);
     }
 
     /**

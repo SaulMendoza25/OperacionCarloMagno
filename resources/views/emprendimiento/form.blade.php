@@ -131,14 +131,20 @@
     }
 
     .form-file {
+      border-radius: 8px;
       margin-top: 10px;
       margin-bottom: 10px;
       padding: 3%;
       border: thin solid black;
+      border: none;
+      background-color: var(--text-input-field);
     }
 
     .LGO-image {
-      display: none;
+      border-radius: 8px;
+      background-color: var(--text-input-field);
+     
+      border: none;
       margin: 15px;
     }
 
@@ -153,55 +159,57 @@
       <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
       <h1 class="title">🏆EMPRENDIMIENTO</h1>
       <h2 class="subtitle">Datos del proyecto emprendimiento</h1>
-        <form class="form-main" action="./" method="post" enctype="multipart/form-data">
-          <div class="left">
-            <label for="NDP">Nombre del proyecto:</label>
-            <input type="text" name="NDP" class="form-control" id="NDP">
-            <label for="NPO">Nombre(s) Propietario(s):</label>
-            <input type="text" name="NPO" class="form-control" id="NPO">
-            <label for="DRN">Direccion:</label>
-            <input type="text" name="DRN" class="form-control" id="DRN">
-            <label for="TLF">Telefono:</label>
-            <input type="text" NAME="TLF" class="form-control" id="TLF">
-            <label for="CEO">Correo Electronico:</label>
-            <input type="text" name="CEO" class="form-control" id="CEO">
-            <label for="FIN">Fecha de inicio negocio:</label>
-            <input type="text" name="FIN" class="form-control" id="FIN">
-            <label for="FDF">Fecha de Fin:</label>
-            <input type="text" name="FDF" class="form-control" id="FDF">
-            <label for="RCS">Requiere Capacitaciones:</label>
-            <select class="combo" name="RCS" onChange="combo(this, 'demo')" id="RCS">
+        <form class="form-main" action="{{url ('/emprendimiento')}}" method="post" enctype="multipart/form-data">
+        @csrf 
+        <div class="left">
+            <label for="name_proyect">Nombre del proyecto:</label>
+            <input type="text" name="name_proyect" class="form-control" id="name_proyect">
+            <label for="name_property">Nombre(s) Propietario(s):</label>
+            <input type="text" name="name_property" class="form-control" id="name_property">
+            <label for="addresses">Direccion:</label>
+            <input type="text" name="addresses" class="form-control" id="addresses">
+            <label for="phone_number">Telefono:</label>
+            <input type="text" NAME="phone_number" class="form-control" id="phone_number">
+            <label for="email">Correo Electronico:</label>
+            <input type="text" name="email" class="form-control" id="email">
+            <label for="start_date">Fecha de inicio negocio:</label>
+            <input type="date" value="2023-01-01" min="2023-01-01" max="2150-01-01" name="start_date" class="form-control" id="start_date">
+            <label for="end_date">Fecha de Fin:</label>
+            <input type="date" value="2023-01-01" min="2023-01-01" max="2150-01-01" name="end_date" class="form-control" id="end_date">
+            
+            <label for="require_trainings">Requiere Capacitaciones:</label>
+            <select class="combo" name="require_trainings" onChange="combo(this, 'demo')" id="require_trainings">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
-            <label for="SEP">Subir el proyecto:</label>
-            <input type="text" name="SEP" class="form-control" id="SEP">
-            <label for="LGO">Logo:</label>
+            <label for="upload_proyect">Subir el proyecto:</label>
+            <input type="text" name="upload_proyect" class="form-control" id="upload_proyect">
+            <label for="logo">Logo:</label>
             <div class="PRP-DIV">
-              <select class="combo" name="LGO" onChange="combo(this, 'demo')" id="LGO">
+              <select class="combo" name="logo" onChange="combo(this, 'demo')" id="logo">
                 <option value="SI">SI</option>
                 <option value="NO">NO</option>
               </select>
-              <input type="file" name="LGO" class="form-file LGO-image" id="LGO">
+            <input type="file" name="up_image_logo[]" accept="image/png, image/jpeg" class="form-file LGO-image" id="up_image_logo">
             </div>
           </div>
           <div class="right">
 
-            <label for="CMT">Productos Principales:</label>
+            <label for="main_products">Productos Principales:</label>
             <div class="PRP-DIV">
-              <textarea name="CMT" cols="40" rows="5" class="comment" id="CMT"></textarea>
-              <input type="file" name="PRP" class="form-file" id="PRP">
+              <textarea name="main_products" cols="40" rows="5" class="comment" id="main_products"></textarea>
+              <input type="file" name="up_image_main_products" class="form-file" id="up_image_main_products">
             </div>
-            <label for="SRP">Servicios Principales</label>
-            <input type="text" name="SRP" class="form-control" id="SRP">
-            <label for="FIP">Fuente de Inversion Principales:</label>
-            <input type="text" name="FIP" class="form-control" id="FIP">
-            <label for="RIP">Rango de Inversion Principal:</label>
-            <input type="text" name="RIP" class="form-control" id="RIP">
-            <label for="MRC">Marca:</label>
-            <input type="text" name="MRC" class="form-control" id="MRC">
-            <label for="NDE">Numero de Empleados:</label>
-            <input type="text" name="NDE" class="form-control" id="NDE">
+            <label for="service_products">Servicios Principales</label>
+            <input type="text" name="service_products" class="form-control" id="service_products">
+            <label for="main_investment_source">Fuente de Inversion Principales:</label>
+            <input type="text" name="main_investment_source" class="form-control" id="main_investment_source">
+            <label for="principal_investment_range">Rango de Inversion Principal:</label>
+            <input type="text" name="principal_investment_range" class="form-control" id="principal_investment_range">
+            <label for="mark">Marca:</label>
+            <input type="text" name="mark" class="form-control" id="mark">
+            <label for="number_employees">Numero de Empleados:</label>
+            <input type="text" name="number_employees" class="form-control" id="number_employees">
             <button class="primary-button" action="submit">Enviar</button>
           </div>
           <form>

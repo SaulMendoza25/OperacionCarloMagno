@@ -23,6 +23,7 @@
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       /* background-color: papayawhip; */
+
     }
 
     .main {
@@ -30,7 +31,7 @@
       height: 100vh;
       display: grid;
       place-items: center;
-     
+
     }
 
     .form-container-main {
@@ -119,9 +120,7 @@
       margin-top: 60px;
     }
 
-    @media (max-width: 640px) {
-      
-    }
+    @media (max-width: 640px) {}
   </style>
   <title>🪃MIPYMES</title>
 </head>
@@ -165,7 +164,7 @@
             <label for="TDC">Telefono de contactos:</label>
             <input type="text" name="TDC" class="form-control" id="TDC">
             <label for="TRL">Titular/Representante legal:</label>
-            <input type="text" name="TRL"class="form-control" id="TRL">
+            <input type="text" name="TRL" class="form-control" id="TRL">
             <label for="GRT">Genero Representante:</label>
             <select class="combo" name="GRT" onChange="combo(this, 'demo')" id="GRT">
               <option value="Masculino">Masculino</option>
@@ -237,10 +236,11 @@
           </div>
           <div></div>
           <div class="right">
-          <button class="primary-button" action="submit">Enviar</button>
+            <button class="primary-button" action="submit">Enviar</button>
           </div>
           <form>
-     </div>
-   </div>
- </body>
+    </div>
+  </div>
+</body>
+
 </html>

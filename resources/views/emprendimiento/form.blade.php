@@ -30,7 +30,7 @@
       height: 100vh;
       display: grid;
       place-items: center;
-     
+
     }
 
     .form-container-main {
@@ -119,22 +119,24 @@
     .espacio {
       margin-top: 60px;
     }
-    .comment{
-        height:120px; 
-        width:300px;
+
+    .comment {
+      height: 120px;
+      width: 300px;
     }
-    .form-file{
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding:3%;
-        border:thin solid black;
+
+    .form-file {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 3%;
+      border: thin solid black;
     }
-    @media (max-width: 640px) {
-      
-    }
+
+    @media (max-width: 640px) {}
   </style>
   <title>🏆EMPRENDIMIENTO</title>
 </head>
+
 <body>
   <div class="main">
     <div class="form-container-main">
@@ -155,12 +157,12 @@
             <input type="text" name="CEO" class="form-control" id="CEO">
             <label for="FIN">Fecha de inicio negocio:</label>
             <input type="text" name="FIN" class="form-control" id="FIN">
-        </div>
+          </div>
           <div class="right">
-          <label for="CMT">Productos Principales:</label>
+            <label for="CMT">Productos Principales:</label>
             <div class="PRP-DIV">
-            <textarea name="CMT" cols="40" rows="5" class="comment" id="CMT"></textarea>
-            <input type="file" name="PRP" class="form-file" id="PRP">
+              <textarea name="CMT" cols="40" rows="5" class="comment" id="CMT"></textarea>
+              <input type="file" name="PRP" class="form-file" id="PRP">
             </div>
             <label for="SRP">Servicios Principales</label>
             <input type="text" name="SRP" class="form-control" id="SRP">
@@ -169,7 +171,7 @@
             <label for="RIP">Rango de Inversion Principal:</label>
             <input type="text" name="RIP" class="form-control" id="RIP">
             <label for="MRC">Marca:</label>
-            <input type="text" name="MRC"class="form-control" id="MRC">
+            <input type="text" name="MRC" class="form-control" id="MRC">
             <label for="NDE">Numero de Empleados:</label>
             <input type="text" name="NDE" class="form-control" id="NDE">
           </div>
@@ -187,10 +189,11 @@
             <input type="text" name="LGO" class="form-control" id="LGO">
           </div>
           <div class="right">
-          <button class="primary-button" action="submit">Enviar</button>
+            <button class="primary-button" action="submit">Enviar</button>
           </div>
           <form>
-     </div>
-   </div>
- </body>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -30,11 +30,13 @@
       height: 100vh;
       display: grid;
       place-items: center;
+     
     }
 
     .form-container-main {
       display: grid;
       width: 1000px;
+      background-color: white;
     }
 
     .form-container-main .form-main {
@@ -121,7 +123,7 @@
       
     }
   </style>
-  <title>Document</title>
+  <title>🪃MIPYMES</title>
 </head>
 
 <body>
@@ -130,18 +132,18 @@
       <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
       <h1 class="title">MIPYMES</h1>
       <h2 class="subtitle">Datos Generales</h1>
-        <form class="form-main" action="/">
+        <form class="form-main" action="./" method="post" enctype="multipart/form-data">
           <div class="left">
             <label for="RUC">RUC:</label>
             <input type="text" class="form-control" id="RUC">
             <label for="RZS">Razon Social:</label>
-            <input type="text" class="form-control" id="RZS">
+            <input type="text" nam="RZS" class="form-control" id="RZS">
             <label for="NBC">Nombre Comercial:</label>
-            <input type="text" class="form-control" id="NBC">
+            <input type="text" name="NBC" class="form-control" id="NBC">
             <label for="NDC">Numeros de Colaboradores:</label>
-            <input type="text" class="form-control" id="NDC">
+            <input type="text" NAME="NDC" class="form-control" id="NDC">
             <label for="FGA">Formación del gerente o administrador:</label>
-            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
+            <select class="combo" name="educacion" onChange="combo(this, 'demo')">
               <option value="Primaria">Primaria</option>
               <option value="Secundaria">Secundaria</option>
               <option value="Tercer Nivel">Tercer Nivel</option>
@@ -149,37 +151,40 @@
               <option value="Doctorado">Doctorado</option>
             </select>
             <label for="DCN">Direccion:</label>
-            <input type="text" class="form-control" id="DCN">
+            <input type="text" name="DCN" class="form-control" id="DCN">
             <label for="CEO">Correo Electronico:</label>
-            <input type="text" class="form-control" id="CEO">
+            <input type="text" name="CEO" class="form-control" id="CEO">
           </div>
           <div class="right">
             <label for="PRV">Provincia:</label>
-            <input type="text" class="form-control" id="PRV">
+            <input type="text" name="PRV" class="form-control" id="PRV">
             <label for="CTN">Canton:</label>
-            <input type="text" class="form-control" id="CTN">
+            <input type="text" name="CTN" class="form-control" id="CTN">
             <label for="PRQ">Parroquia:</label>
-            <input type="text" class="form-control" id="PRQ">
+            <input type="text" name="PRQ" class="form-control" id="PRQ">
             <label for="TDC">Telefono de contactos:</label>
-            <input type="text" class="form-control" id="TDC">
+            <input type="text" name="TDC" class="form-control" id="TDC">
             <label for="TRL">Titular/Representante legal:</label>
-            <input type="text" class="form-control" id="TRL">
+            <input type="text" name="TRL"class="form-control" id="TRL">
             <label for="GRT">Genero Representante:</label>
-            <input type="text" class="form-control" id="GRT">
+            <select class="combo" name="GRT" onChange="combo(this, 'demo')" id="GRT">
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
           </div>
           <div class="left">
             <h1 class="subtitle">Actividad Comercial y Categorías</h1>
-            <label for="LGO">Logo:</label>
-            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
+            <label for="LGO">Logo: (opcional)</label>
+            <select class="combo" name="LGO" onChange="combo(this, 'demo')" id="LGO">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
             <label for="NDE">Numeros de establecimientos:</label>
-            <input type="text" class="form-control" id="NDE">
+            <input type="text" name="NDE" class="form-control" id="NDE">
             <label for="FIN">Fecha de inicio negocio:</label>
-            <input type="text" class="form-control" id="FIN">
+            <input type="text" name="FIN" class="form-control" id="FIN">
             <label for="CGA">Categoria:</label>
-            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
+            <select class="combo" name="CGA" onChange="combo(this, 'demo')" id="CGA">
               <option value="Comercio">Comercio</option>
               <option value="Servicio">Servicio</option>
               <option value="Industrias">Industrias</option>
@@ -188,18 +193,18 @@
             </select>
           </div>
           <div class="right">
-            <label class="espacio" for="POS">Productos o servicios:</label>
-            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
+            <label class="espacio" for="POS">Productos o servicios:(c mamaron)</label>
+            <select class="combo" name="POS" onChange="combo(this, 'demo')" id="POS">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
-            <label for="POS">Producto de comercio justo:</label>
-            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
+            <label for="PCJ">Producto de comercio justo:(c mamaron)</label>
+            <select class="combo" name="PCJ" onChange="combo(this, 'demo')" id="PCJ">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
-            <label for="POS">Comercio exterior:</label>
-            <select class="combo" name="optionlist " onChange="combo(this, 'demo')">
+            <label for="CEX">Comercio exterior: (c mamaron)</label>
+            <select class="combo" name="CEX" onChange="combo(this, 'demo')" id="CEX">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
@@ -207,36 +212,35 @@
 
           <div class="left">
             <h1 class="subtitle">Localización georeferenciada</h1>
-            <label for="CDS">Cordenadas:</label>
-            <input type="text" class="form-control" id="CDS">
+            <label for="CDS">Cordenadas: (opcional)</label>
+            <input type="text" name="CDS" class="form-control" id="CDS">
           </div>
           <div class="right">
-            <label class="espacio" for="IMG">Imagen:</label>
-            <input type="text" class="form-control" id="CDS">
+            <label class="espacio" for="IMG">Imagen: (opcional)</label>
+            <input type="text" name="IMG" class="form-control" id="IMG">
           </div>
 
           <div class="left">
             <h1 class="subtitle">Información Tecnológica</h1>
             <label for="CEC">Comercio Electrónico:</label>
-            <input type="text" class="form-control" id="CEC">
-            <label for="RCN">Requiere Capacitaciones:</label>
-            <input type="text" class="form-control" id="RCN">
-            <label for="PWB">Página web:</label>
-            <input type="text" class="form-control" id="PWB">
+            <input type="text" name="CEC" class="form-control" id="CEC">
+            <label for="RCN">Requiere Capacitaciones:(opcional)</label>
+            <input type="text" name="RCN" class="form-control" id="RCN">
+            <label for="PWB">Página web:(opcional)</label>
+            <input type="text" name="PWB" class="form-control" id="PWB">
           </div>
           <div class="right">
-            <label class="espacio" for="RSS">Redes Sociales:</label>
-            <input type="text" class="form-control" id="RSS">
+            <label class="espacio" for="RSS">Redes Sociales: (opcional)</label>
+            <input type="text" name="RSS" class="form-control" id="RSS">
             <label for="WTP">Whatsapp:</label>
-            <input type="text" class="form-control" id="WTP">
+            <input type="text" name="WTP" class="form-control" id="WTP">
           </div>
           <div></div>
           <div class="right">
-          <button class="primary-button" action="submit">Aceptar</button>
+          <button class="primary-button" action="submit">Enviar</button>
           </div>
           <form>
-    </div>
-  </div>
-</body>
-
+     </div>
+   </div>
+ </body>
 </html>

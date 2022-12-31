@@ -14,7 +14,8 @@ class EmprendimientoController extends Controller
      */
     public function index()
     {
-        //
+        $datos['emprendimiento']=emprendimiento::paginate(5);
+        return view('emprendimiento.index',$datos);
     }
 
     /**
@@ -24,7 +25,7 @@ class EmprendimientoController extends Controller
      */
     public function create()
     {
-        return view('emprendimiento/form');
+        return view('emprendimiento/create');
         //
     }
 
@@ -53,7 +54,7 @@ class EmprendimientoController extends Controller
         $datosemprendimiento['up_image_main_mark']=$request->file('up_image_main_mark')->store('uploads','public');
         
         emprendimiento::insert($datosemprendimiento);
-        return $mamstes;
+        return response()->json($datosemprendimiento);
     }
 
     /**
@@ -73,9 +74,10 @@ class EmprendimientoController extends Controller
      * @param  \App\Models\emprendimiento  $emprendimiento
      * @return \Illuminate\Http\Response
      */
-    public function edit(emprendimiento $emprendimiento)
+    public function edit($id)
     {
-        //
+        $emprendimiento=emprendimiento::findOrFail($id);
+        return view('emprendimiento/edit' , compact('emprendimiento'));
     }
 
     /**
@@ -96,8 +98,9 @@ class EmprendimientoController extends Controller
      * @param  \App\Models\emprendimiento  $emprendimiento
      * @return \Illuminate\Http\Response
      */
-    public function destroy(emprendimiento $emprendimiento)
+    public function destroy($id)
     {
-        //
+        emprendimiento::destroy($id);
+        return redirect('emprendimiento');
     }
 }

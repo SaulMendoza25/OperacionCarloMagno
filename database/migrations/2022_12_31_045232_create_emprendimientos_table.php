@@ -15,24 +15,25 @@ class CreateEmprendimientosTable extends Migration
     {
         Schema::create('emprendimientos', function (Blueprint $table) {
             $table->id();
-            $table->string('name_proyect')->nullable();
-            $table->string('name_property')->nullable();
-            $table->string('addresses')->nullable();
-            $table->integer('phone_number')->nullable();
-            $table->string('email')->nullable();
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
-            $table->string('require_trainings');
-            $table->string('upload_proyect');
-            $table->string('logo');
-            $table->string('main_products')->nullable();
-            $table->string('main_service')->nullable();
-            $table->string('main_investment_source')->nullable();
-            $table->string('principal_investment_range')->nullable();
-            $table->string('number_employees')->nullable();
-            $table->string('up_image_logo');
-            $table->string('up_image_main_products');
-            $table->string('up_image_main_mark');
+            $table->string('name_proyect');
+            $table->string('name_property');
+            $table->string('addresses');
+            $table->integer('phone_number');
+            $table->string('email');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('require_trainings')->nullable();
+            $table->string('theme_require_trainings')->nullable();
+            $table->string('upload_proyect')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('main_products');
+            $table->string('main_service');
+            $table->string('main_investment_source');
+            $table->string('principal_investment_range');
+            $table->integer('number_employees');
+            $table->string('up_image_logo')->nullable();
+            $table->string('up_image_main_products')->nullable();
+            $table->string('up_image_main_mark')->nullable();
             $table->timestamps();
         });
     }

@@ -37,9 +37,23 @@ class EmprendimientoController extends Controller
     public function store(Request $request)
     {
         // $datosemprendimiento = request()->all();
+
         $datosemprendimiento = request()->except('_token');
+        if($request->hasFile('upload_proyect'))
+     
+        $datosemprendimiento['upload_proyect']=$request->file('upload_proyect')->store('uploads-PDF','public');
+        $mamstes="la cantidad de byte es: " . filesize($request->file('upload_proyectk'));
+        if($request->hasFile('up_image_logo'))
+        $datosemprendimiento['up_image_logo']=$request->file('up_image_logo')->store('uploads','public');
+
+        if($request->hasFile('up_image_main_products'))
+        $datosemprendimiento['up_image_main_products']=$request->file('up_image_main_products')->store('uploads','public');
+
+        if($request->hasFile('up_image_main_mark'))
+        $datosemprendimiento['up_image_main_mark']=$request->file('up_image_main_mark')->store('uploads','public');
+        
         emprendimiento::insert($datosemprendimiento);
-        return response()->json($datosemprendimiento);
+        return $mamstes;
     }
 
     /**

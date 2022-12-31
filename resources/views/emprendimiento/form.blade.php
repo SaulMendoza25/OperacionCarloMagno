@@ -104,6 +104,7 @@
       font-weight: bold;
       height: 50px;
       margin-top: 25px;
+      text-align: center;
     }
 
     .combo {
@@ -143,7 +144,7 @@
     .LGO-image {
       border-radius: 8px;
       background-color: var(--text-input-field);
-     
+    
       border: none;
       margin: 15px;
     }
@@ -179,38 +180,39 @@
             
             <label for="require_trainings">Requiere Capacitaciones:</label>
             <select class="combo" name="require_trainings" onChange="combo(this, 'demo')" id="require_trainings">
-              <option value="SI">SI</option>
-              <option value="NO">NO</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
             </select>
-            <label for="upload_proyect">Subir el proyecto:</label>
-            <input type="text" name="upload_proyect" class="form-control" id="upload_proyect">
-            <label for="logo">Logo:</label>
+            <label for="upload_proyect">Subir el proyecto (PDF):</label>
+            <input type="file" name="upload_proyect" accept="application/pdf" class="form-file" id="upload_proyect">
+            
+            <label for="logo">Logo (JPEG/PNG):</label>
             <div class="PRP-DIV">
               <select class="combo" name="logo" onChange="combo(this, 'demo')" id="logo">
-                <option value="SI">SI</option>
-                <option value="NO">NO</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
               </select>
-            <input type="file" name="up_image_logo[]" accept="image/png, image/jpeg" class="form-file LGO-image" id="up_image_logo">
+            <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="form-file LGO-image" id="up_image_logo">
             </div>
           </div>
           <div class="right">
 
-            <label for="main_products">Productos Principales:</label>
+            <label for="main_products">Productos Principales (JPEG/PNG):</label>
             <div class="PRP-DIV">
               <textarea name="main_products" cols="40" rows="5" class="comment" id="main_products"></textarea>
-              <input type="file" name="up_image_main_products" class="form-file" id="up_image_main_products">
+              <input type="file" name="up_image_main_products" accept="image/png, image/jpeg" class="form-file" id="up_image_main_products">
             </div>
-            <label for="service_products">Servicios Principales</label>
-            <input type="text" name="service_products" class="form-control" id="service_products">
+            <label for="main_service">Servicios Principales</label>
+            <textarea name="main_service" cols="40" rows="5" class="comment" id="main_service"></textarea>
             <label for="main_investment_source">Fuente de Inversion Principales:</label>
             <input type="text" name="main_investment_source" class="form-control" id="main_investment_source">
             <label for="principal_investment_range">Rango de Inversion Principal:</label>
             <input type="text" name="principal_investment_range" class="form-control" id="principal_investment_range">
-            <label for="mark">Marca:</label>
-            <input type="text" name="mark" class="form-control" id="mark">
+            <label for="mark">Marca (JPEG/PNG):</label>
+            <input type="file" name="up_image_main_mark"accept="image/png, image/jpeg" class="form-file" id="mark">
             <label for="number_employees">Numero de Empleados:</label>
             <input type="text" name="number_employees" class="form-control" id="number_employees">
-            <button class="primary-button" action="submit">Enviar</button>
+            <input class="primary-button" type="submit" value="Guardar Datos">
           </div>
           <form>
     </div>

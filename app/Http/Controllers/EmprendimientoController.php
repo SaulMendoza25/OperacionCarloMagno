@@ -36,7 +36,9 @@ class EmprendimientoController extends Controller
      */
     public function store(Request $request)
     {
-        $datosemprendimiento = request()->all();
+        // $datosemprendimiento = request()->all();
+        $datosemprendimiento = request()->except('_token');
+        emprendimiento::insert($datosemprendimiento);
         return response()->json($datosemprendimiento);
     }
 

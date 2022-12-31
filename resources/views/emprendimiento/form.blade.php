@@ -18,11 +18,13 @@
       --md: 16px;
       --lg: 25px;
     }
+
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       /* background-color: papayawhip; */
     }
+
     .main {
       width: 100%;
       height: 100vh;
@@ -30,34 +32,41 @@
       place-items: center;
 
     }
+
     .form-container-main {
       display: grid;
       width: 1000px;
       background-color: white;
     }
+
     .form-container-main .form-main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 50px;
     }
+
     .form-main .left {
       display: flex;
       flex-direction: column;
     }
+
     .form-main .right {
       display: flex;
       flex-direction: column;
     }
+
     .logo {
       width: 250px;
       margin-bottom: 20px;
       justify-self: center;
     }
+
     .title {
       font-size: var(--lg);
       margin-bottom: 12px;
       text-align: center;
     }
+
     .subtitle {
       color: black;
       font-size: 25px;
@@ -66,12 +75,14 @@
       margin-bottom: 32px;
       text-align: left;
     }
+
     label {
       font-size: var(--sm);
       font-weight: bold;
       margin-bottom: 4px;
       cursor: pointer;
     }
+
     .form-control {
       background-color: var(--text-input-field);
       border: none;
@@ -81,6 +92,7 @@
       padding: 6px;
       margin-bottom: 12px;
     }
+
     .primary-button {
       background-color: var(--hospital-green);
       border-radius: 8px;
@@ -93,6 +105,7 @@
       height: 50px;
       margin-top: 25px;
     }
+
     .combo {
       background-color: var(--text-input-field);
       border: none;
@@ -102,9 +115,11 @@
       padding: 6px;
       margin-bottom: 12px;
     }
+
     .espacio {
       margin-top: 60px;
     }
+
     .comment {
       height: 120px;
       background-color: var(--text-input-field);
@@ -121,10 +136,12 @@
       padding: 3%;
       border: thin solid black;
     }
-    .LGO-image{
+
+    .LGO-image {
       display: none;
       margin: 15px;
     }
+
     @media (max-width: 640px) {}
   </style>
   <title>🏆EMPRENDIMIENTO</title>
@@ -161,15 +178,15 @@
             <input type="text" name="SEP" class="form-control" id="SEP">
             <label for="LGO">Logo:</label>
             <div class="PRP-DIV">
-            <select class="combo" name="LGO" onChange="combo(this, 'demo')" id="LGO">
-              <option value="SI">SI</option>
-              <option value="NO">NO</option>
-            </select>
-            <input type="file" name="LGO" class="form-file LGO-image" id="LGO">
+              <select class="combo" name="LGO" onChange="combo(this, 'demo')" id="LGO">
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+              </select>
+              <input type="file" name="LGO" class="form-file LGO-image" id="LGO">
             </div>
           </div>
           <div class="right">
-            
+
             <label for="CMT">Productos Principales:</label>
             <div class="PRP-DIV">
               <textarea name="CMT" cols="40" rows="5" class="comment" id="CMT"></textarea>

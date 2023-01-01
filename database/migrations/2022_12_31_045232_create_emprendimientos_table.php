@@ -22,10 +22,10 @@ class CreateEmprendimientosTable extends Migration
             $table->string('email');
             $table->date('start_date');
             $table->date('end_date');
-            $table->string('require_trainings')->nullable();
+            //$table->string('require_trainings')->nullable();
             $table->string('theme_require_trainings')->nullable();
             $table->string('upload_proyect')->nullable();
-            $table->string('logo')->nullable();
+           // $table->string('logo')->nullable();
             $table->string('main_products');
             $table->string('main_service');
             $table->string('main_investment_source');

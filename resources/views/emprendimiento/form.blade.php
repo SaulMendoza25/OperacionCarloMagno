@@ -16,7 +16,7 @@
             <input type="date" value="2023-01-01" min="2023-01-01" max="2150-01-01" name="end_date" class="form-control" id="end_date" value="{{isset($emprendimiento->end_date)?$emprendimiento->end_date:''}}">
             
             <label for="require_trainings">Requiere Capacitaciones:</label>
-            <select class="combo" name="require_trainings" onChange="combo(this, 'demo')" id="require_trainings" value="{{isset($emprendimiento->require_trainings)?$emprendimiento->require_trainings:''}}">
+            <select class="combo"  onChange="combo(this, 'demo')" id="require_trainings" value="{{isset($emprendimiento->require_trainings)?$emprendimiento->require_trainings:''}}">
               <option value="Si">Si</option>
               <option value="No">No</option>
             </select>
@@ -26,7 +26,7 @@
             
             <label for="logo">Logo (JPEG/PNG):</label>
             <div class="PRP-DIV">
-              <select class="combo" name="logo" onChange="combo(this, 'demo')" id="logo" value="{{isset($emprendimiento->logo)?$emprendimiento->logo:''}}">
+              <select class="combo"  onChange="combo(this, 'demo')" id="logo" value="{{isset($emprendimiento->logo)?$emprendimiento->logo:''}}">
                 <option value="Si">Si</option>
                 <option value="No">No</option>
               </select>

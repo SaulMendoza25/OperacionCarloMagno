@@ -26,6 +26,7 @@
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
+      background: white;
       /* background-color: papayawhip; */
     }
 
@@ -39,8 +40,9 @@
 
     .form-container-main {
       display: grid;
-      width: 1000px;
-      background-color: white;
+      width: 1500px;
+      padding: 20px;
+      
     }
 
     .form-container-main .form-main {
@@ -85,16 +87,19 @@
       font-weight: bold;
       margin-bottom: 4px;
       cursor: pointer;
+      margin-bottom: 5px;
+      
     }
 
     .form-control {
       background-color: var(--text-input-field);
-      border: none;
       border-radius: 8px;
       height: 30px;
       font-size: var(--md);
       padding: 6px;
       margin-bottom: 12px;
+      border: 1px solid #ccc;
+      transition: 0.2s box-shadow ease;
     }
 
     .primary-button {
@@ -113,12 +118,12 @@
 
     .combo {
       background-color: var(--text-input-field);
-      border: none;
       border-radius: 8px;
       height: 50px;
       font-size: var(--md);
       padding: 6px;
       margin-bottom: 12px;
+      border: 1px solid #ccc;
     }
 
     .espacio {
@@ -128,7 +133,7 @@
     .comment {
       height: 120px;
       background-color: var(--text-input-field);
-      border: none;
+      border: 1px solid #ccc;
       border-radius: 8px;
       font-size: var(--md);
       padding: 6px;
@@ -140,8 +145,8 @@
       margin-top: 10px;
       margin-bottom: 10px;
       padding: 3%;
-      border: thin solid black;
-      border: none;
+     
+      border: 1px solid #ccc;
       background-color: var(--text-input-field);
     }
 

@@ -11,9 +11,9 @@
             <label for="email">Correo Electronico:</label>
             <input type="text" name="email" class="form-control" id="email" value="{{isset($emprendimiento->email)?$emprendimiento->email:''}}">
             <label for="start_date">Fecha de inicio negocio:</label>
-            <input type="date" value="2023-01-01" min="2023-01-01" max="2150-01-01" name="start_date" class="form-control" id="start_date" value="{{isset($emprendimiento->start_date)?$emprendimiento->start_date:''}}">
+            <input type="date"  min="2023-01-01" max="2150-01-01" name="start_date" class="form-control" id="start_date" value="{{isset($emprendimiento->start_date)?$emprendimiento->start_date:''}}">
             <label for="end_date">Fecha de Fin:</label>
-            <input type="date" value="2023-01-01" min="2023-01-01" max="2150-01-01" name="end_date" class="form-control" id="end_date" value="{{isset($emprendimiento->end_date)?$emprendimiento->end_date:''}}">
+            <input type="date"  min="2023-01-01" max="2150-01-01" name="end_date" class="form-control" id="end_date" value="{{isset($emprendimiento->end_date)?$emprendimiento->end_date:''}}">
             
             <label for="require_trainings">Requiere Capacitaciones:</label>
             <select class="combo"  onChange="combo(this, 'demo')" id="require_trainings" value="{{isset($emprendimiento->require_trainings)?$emprendimiento->require_trainings:''}}">

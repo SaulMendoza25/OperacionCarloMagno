@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-         @foreach($emprendimiento as $value)
+        @foreach($emprendimiento as $value)
         <tr>
             <td>{{$value->id}}</td>
             <td>{{$value->name_proyect}}</td>
@@ -44,11 +44,11 @@
             <td>{{$value->upload_proyect}}</td>
             <td>{{$value->up_image_logo}}</td>
             <td> <a href="{{url('/emprendimiento/' .$value->id. '/edit')}}">Editar</a> | <form action="{{'/emprendimiento/'.$value->id }}" method="post">
-            @csrf
-            {{method_field('DELETE') }}
-            <input type="submit" onclick="return confirm('Deseas realmente borrar?')" value="Borrar">
-            </form>
-        </td>        
+                    @csrf
+                    {{method_field('DELETE') }}
+                    <input type="submit" onclick="return confirm('Deseas realmente borrar?')" value="Borrar">
+                </form>
+            </td>
         </tr>
         @endforeach
     </tbody>

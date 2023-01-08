@@ -23,7 +23,7 @@
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       /* background-color: papayawhip; */
-
+      background: white;
     }
 
     .main {
@@ -36,8 +36,8 @@
 
     .form-container-main {
       display: grid;
-      width: 1000px;
-      background-color: white;
+      width: 1500px;
+      padding: 20px;
     }
 
     .form-container-main .form-main {
@@ -51,11 +51,16 @@
       flex-direction: column;
     }
 
+    .form-main .right1 {
+      display: flex;
+      flex-direction: column;
+     
+    }
     .form-main .right {
       display: flex;
       flex-direction: column;
+      margin-top: 65px;
     }
-
     .logo {
       width: 250px;
       margin-bottom: 20px;
@@ -81,17 +86,21 @@
       font-size: var(--sm);
       font-weight: bold;
       margin-bottom: 4px;
+      cursor: pointer;
+      margin-bottom: 5px;
     }
 
-    input {
+    .form-control {
       background-color: var(--text-input-field);
-      border: none;
       border-radius: 8px;
       height: 30px;
       font-size: var(--md);
       padding: 6px;
       margin-bottom: 12px;
+      border: 1px solid #ccc;
+      transition: 0.2s box-shadow ease;
     }
+
 
     .primary-button {
       background-color: var(--hospital-green);
@@ -104,20 +113,49 @@
       font-weight: bold;
       height: 50px;
       margin-top: 25px;
+      text-align: center;
     }
 
     .combo {
       background-color: var(--text-input-field);
-      border: none;
       border-radius: 8px;
       height: 50px;
       font-size: var(--md);
       padding: 6px;
       margin-bottom: 12px;
+      border: 1px solid #ccc;
     }
 
     .espacio {
       margin-top: 60px;
+    }
+
+    .comment {
+      height: 120px;
+      background-color: var(--text-input-field);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: var(--md);
+      padding: 6px;
+      margin-bottom: 12px;
+    }
+
+    .form-file {
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 3%;
+
+      border: 1px solid #ccc;
+      background-color: var(--text-input-field);
+    }
+
+    .image_logo {
+      border-radius: 8px;
+      background-color: var(--text-input-field);
+
+      border: none;
+      margin: 15px;
     }
 
     @media (max-width: 640px) {}

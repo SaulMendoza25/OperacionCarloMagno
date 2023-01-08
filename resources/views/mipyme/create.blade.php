@@ -51,11 +51,16 @@
       flex-direction: column;
     }
 
+    .form-main .right1 {
+      display: flex;
+      flex-direction: column;
+     
+    }
     .form-main .right {
       display: flex;
       flex-direction: column;
+      margin-top: 65px;
     }
-
     .logo {
       width: 250px;
       margin-bottom: 20px;

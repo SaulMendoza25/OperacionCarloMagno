@@ -20,7 +20,7 @@
   <label for="E-mail_address">Correo Electronico:</label>
   <input type="text" name="E_mail_address" class="form-control" id="E-mail_address">
 </div>
-<div class="right">
+<div class="right1">
   <label for="Province">Provincia:</label>
   <input type="text" name="Province" class="form-control" id="Province">
   <label for="County">Canton:</label>
@@ -44,7 +44,7 @@
     <option value="SI">SI</option>
     <option value="NO">NO</option>
   </select>
-  <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="form-file image_logo" id="up_image_logo" value="{{isset($mypime->up_image_logo)?$mypime->up_image_logo:''}}">
+  <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="comment" id="up_image_logo" value="{{isset($mypime->up_image_logo)?$mypime->up_image_logo:''}}">
   <label for="Number_of_establishments">Numeros de establecimientos:</label>
   <input type="text" name="Number_of_establishments" class="form-control" id="Number_of_establishments">
   <label for="Business_start_date">Fecha de inicio del negocio:</label>
@@ -79,7 +79,7 @@
   <label for="Coordinates">Cordenadas: (opcional)</label>
   <input type="text" name="Coordinates" class="form-control" id="Coordinates">
 </div>
-<div class="right">
+<div class="right1">
   <label class="espacio" for="image">Imagen: (opcional)</label>
   <input type="file" name="image" accept="image/png, image/jpeg" class="comment" id="image" value="{{isset($mypime->image)?$mypime->image:''}}">
 </div>
@@ -97,8 +97,5 @@
   <input type="text" name="social_media" class="form-control" id="social_media">
   <label for="Whatsapp">Whatsapp:</label>
   <input type="text" name="Whatsapp" class="form-control" id="Whatsapp">
-</div>
-<div></div>
-<div class="right">
   <input class="primary-button" type="submit" value="Guardar Datos">
 </div>

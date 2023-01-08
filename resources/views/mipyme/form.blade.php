@@ -135,55 +135,55 @@
           <div class="left">
             <label for="RUC">RUC:</label>
             <input type="text" class="form-control" id="RUC">
-            <label for="RZS">Razon Social:</label>
-            <input type="text" nam="RZS" class="form-control" id="RZS">
-            <label for="NBC">Nombre Comercial:</label>
-            <input type="text" name="NBC" class="form-control" id="NBC">
-            <label for="NDC">Numeros de Colaboradores:</label>
-            <input type="text" NAME="NDC" class="form-control" id="NDC">
-            <label for="FGA">Formación del gerente o administrador:</label>
-            <select class="combo" name="educacion" onChange="combo(this, 'demo')">
+            <label for="Business_name">Razon Social:</label>
+            <input type="text" nam="Business_name" class="form-control" id="Business_name">
+            <label for="Trade_name">Nombre Comercial:</label>
+            <input type="text" name="Trade_name" class="form-control" id="Trade_name">
+            <label for="Number_of_collaborators">Numeros de Colaboradores:</label>
+            <input type="text" NAME="Number_of_collaborators" class="form-control" id="Number_of_collaborators">
+            <label for="Formation_of_manager_or _administrator">Formación del gerente o administrador:</label>
+            <select class="combo" name="Formation_of_manager_or _administrator" onChange="combo(this, 'demo')" id="Formation_of_manager_or _administrator">
               <option value="Primaria">Primaria</option>
               <option value="Secundaria">Secundaria</option>
               <option value="Tercer Nivel">Tercer Nivel</option>
               <option value="Maestria">Maestria</option>
               <option value="Doctorado">Doctorado</option>
             </select>
-            <label for="DCN">Direccion:</label>
-            <input type="text" name="DCN" class="form-control" id="DCN">
-            <label for="CEO">Correo Electronico:</label>
-            <input type="text" name="CEO" class="form-control" id="CEO">
+            <label for="Address">Direccion:</label>
+            <input type="text" name="Address" class="form-control" id="Address">
+            <label for="E-mail_address">Correo Electronico:</label>
+            <input type="text" name="E-mail_address" class="form-control" id="E-mail_address">
           </div>
           <div class="right">
-            <label for="PRV">Provincia:</label>
-            <input type="text" name="PRV" class="form-control" id="PRV">
-            <label for="CTN">Canton:</label>
-            <input type="text" name="CTN" class="form-control" id="CTN">
-            <label for="PRQ">Parroquia:</label>
-            <input type="text" name="PRQ" class="form-control" id="PRQ">
-            <label for="TDC">Telefono de contactos:</label>
-            <input type="text" name="TDC" class="form-control" id="TDC">
-            <label for="TRL">Titular/Representante legal:</label>
-            <input type="text" name="TRL" class="form-control" id="TRL">
-            <label for="GRT">Genero Representante:</label>
-            <select class="combo" name="GRT" onChange="combo(this, 'demo')" id="GRT">
+            <label for="Province">Provincia:</label>
+            <input type="text" name="Province" class="form-control" id="Province">
+            <label for="County">Canton:</label>
+            <input type="text" name="County" class="form-control" id="County">
+            <label for="Parish">Parroquia:</label>
+            <input type="text" name="Parish" class="form-control" id="Parish">
+            <label for="Contact_telephone_number">Telefono de contactos:</label>
+            <input type="text" name="Contact telephone_number" class="form-control" id="Contact_telephone_number">
+            <label for="Owner/Legal_representative">Titular/Representante legal:</label>
+            <input type="text" name="Owner/Legal_representative" class="form-control" id="Owner/Legal_representative">
+            <label for="Gender_Representative">Genero Representante:</label>
+            <select class="combo" name="Gender_Representative" onChange="combo(this, 'demo')" id="Gender_Representative">
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>
             </select>
           </div>
           <div class="left">
             <h1 class="subtitle">Actividad Comercial y Categorías</h1>
-            <label for="LGO">Logo: (opcional)</label>
-            <select class="combo" name="LGO" onChange="combo(this, 'demo')" id="LGO">
+            <label for="Logo">Logo: (opcional)</label>
+            <select class="combo" name="Logo" onChange="combo(this, 'demo')" id="Logo">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
-            <label for="NDE">Numeros de establecimientos:</label>
-            <input type="text" name="NDE" class="form-control" id="NDE">
-            <label for="FIN">Fecha de inicio negocio:</label>
-            <input type="text" name="FIN" class="form-control" id="FIN">
-            <label for="CGA">Categoria:</label>
-            <select class="combo" name="CGA" onChange="combo(this, 'demo')" id="CGA">
+            <label for="Number_of_establishments">Numeros de establecimientos:</label>
+            <input type="text" name="Number_of_establishments" class="form-control" id="Number_of_establishments">
+            <label for="Business_start_date">Fecha de inicio negocio:</label>
+            <input type="text" name="Business_start_date" class="form-control" id="Business_start_date">
+            <label for="Category">Categoria:</label>
+            <select class="combo" name="Category" onChange="combo(this, 'demo')" id="Category">
               <option value="Comercio">Comercio</option>
               <option value="Servicio">Servicio</option>
               <option value="Industrias">Industrias</option>
@@ -192,18 +192,18 @@
             </select>
           </div>
           <div class="right">
-            <label class="espacio" for="POS">Productos o servicios:(c mamaron)</label>
-            <select class="combo" name="POS" onChange="combo(this, 'demo')" id="POS">
+            <label class="Products_or_services" for="Products_or_services">Productos o servicios:</label>
+            <select class="combo" name="Products_or_services" onChange="combo(this, 'demo')" id="Products_or_services">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
-            <label for="PCJ">Producto de comercio justo:(c mamaron)</label>
-            <select class="combo" name="PCJ" onChange="combo(this, 'demo')" id="PCJ">
+            <label for="Fair_trade_products">Producto de comercio justo:</label>
+            <select class="combo" name="Fair_trade_products" onChange="combo(this, 'demo')" id="Fair_trade_products">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
-            <label for="CEX">Comercio exterior: (c mamaron)</label>
-            <select class="combo" name="CEX" onChange="combo(this, 'demo')" id="CEX">
+            <label for="Foreign_trade">Comercio exterior:</label>
+            <select class="combo" name="Foreign_trade" onChange="combo(this, 'demo')" id="Foreign_trade">
               <option value="SI">SI</option>
               <option value="NO">NO</option>
             </select>
@@ -211,28 +211,27 @@
 
           <div class="left">
             <h1 class="subtitle">Localización georeferenciada</h1>
-            <label for="CDS">Cordenadas: (opcional)</label>
-            <input type="text" name="CDS" class="form-control" id="CDS">
+            <label for="Coordinates">Cordenadas: (opcional)</label>
+            <input type="text" name="Coordinates" class="form-control" id="Coordinates">
           </div>
           <div class="right">
-            <label class="espacio" for="IMG">Imagen: (opcional)</label>
-            <input type="text" name="IMG" class="form-control" id="IMG">
+            <label class="espacio" for="image">Imagen: (opcional)</label>
+            <input type="text" name="image" class="form-control" id="image">
           </div>
-
           <div class="left">
             <h1 class="subtitle">Información Tecnológica</h1>
-            <label for="CEC">Comercio Electrónico:</label>
-            <input type="text" name="CEC" class="form-control" id="CEC">
-            <label for="RCN">Requiere Capacitaciones:(opcional)</label>
-            <input type="text" name="RCN" class="form-control" id="RCN">
-            <label for="PWB">Página web:(opcional)</label>
-            <input type="text" name="PWB" class="form-control" id="PWB">
+            <label for="E-commerce">Comercio Electrónico:</label>
+            <input type="text" name="E-commerce" class="form-control" id="E-commerce">
+            <label for="Requires_training">Requiere Capacitaciones:(opcional)</label>
+            <input type="text" name="Requires_training" class="form-control" id="Requires_training">
+            <label for="Web_page">Página web:(opcional)</label>
+            <input type="text" name="Web_page" class="form-control" id="Web_page">
           </div>
           <div class="right">
-            <label class="espacio" for="RSS">Redes Sociales: (opcional)</label>
-            <input type="text" name="RSS" class="form-control" id="RSS">
-            <label for="WTP">Whatsapp:</label>
-            <input type="text" name="WTP" class="form-control" id="WTP">
+            <label class="social_media" for="social_media">Redes Sociales: (opcional)</label>
+            <input type="text" name="social_media" class="form-control" id="social_media">
+            <label for="Whatsapp">Whatsapp:</label>
+            <input type="text" name="Whatsapp" class="form-control" id="Whatsapp">
           </div>
           <div></div>
           <div class="right">
@@ -242,5 +241,4 @@
     </div>
   </div>
 </body>
-
 </html>

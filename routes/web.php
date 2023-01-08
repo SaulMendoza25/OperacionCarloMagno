@@ -15,7 +15,7 @@ use App\Http\Controllers\EmprendimientoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 /*Route::get('/formulario', function () {
     return view('mipyme.form');

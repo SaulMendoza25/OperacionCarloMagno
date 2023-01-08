@@ -14,33 +14,45 @@ class CreateMypimesTable extends Migration
     public function up()
     {
         Schema::create('mypimes', function (Blueprint $table) {
-            $table->id();
-            $table->string('ruc')->unique();
-            $table->string('Provincia');
+            $table->id(); //id se genera automaticamente
+            //Datos Generales
+            $table->integer('RUC')->unique();
             $table->string('Razon_Social');
-            $table->string('canton');
             $table->string('nombre_comercial');
+            $table->integer('numero_de_colaboradores');
+            $table->string('direccion');
+            $table->string('Provincia');
+            $table->string('canton');
             $table->string('parroquia');
-            $table->string('numcolaboradoes');
             $table->integer('telefono_contacto');
             $table->string('gerente_formacion_educacional');
             $table->string('titular_representante');
-            $table->string('direccion');
+            $table->string('correo_electronico');
             $table->string('genero_representate');
-            $table->timestamp('email_verified_at');
+            //Actividad Comercial y Categorias
+            $table->string('logo')->nullable();//Opcional
+            $table->string('imagen_logo')->nullable();//Opcional 
             $table->string('numero_de_establecimiento');
-            $table->date('fecha_inicion');
+            $table->date('fecha_inicio_negocio');
             $table->string('categoria');
+            $table->string('producto_severcios_detalle');
+            $table->string('producto_severcios');
+            $table->string('producto_comercio_justo');
+            $table->string('comercio_exterior');
+            //Localicacion georeferencia
+            $table->string('coordenadas')->nullable();//Opcional 
+            $table->string('imagen_lugar');
+            //Informcaion Tecnologica
+            $table->string('comercio_electronico')->nullable();//Opcional 
+            $table->string('requiere_capacitacion')->nullable();//Opcional 
+            $table->string('pagina_web')->nullable();//Opcional 
+            $table->string('redes_sociales')->nullable();//Opcional 
+            $table->string('whatsapp')->nullable();//Opcional 
+
+           
+            
             //
             //
-            $table->string('coordenadas');
-            $table->string('logo');
-            //$table->string('imagen');
-            $table->string('comercio_electronico')->nullable();
-            $table->string('requiere_capacitacion');
-            $table->string('pagina_web');
-            $table->string('redes_sociales');
-            $table->integer ('whatsapp');
             $table->rememberToken();
             $table->timestamps();
         });

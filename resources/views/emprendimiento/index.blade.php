@@ -1,3 +1,8 @@
+<style>
+    .table{
+        background:red;
+    }
+</style>
 <table class="table table-light">
     <thead class="thead-light">
         <tr>

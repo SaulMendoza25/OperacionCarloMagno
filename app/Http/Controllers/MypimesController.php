@@ -15,7 +15,7 @@ class MypimesController extends Controller
     public function index()
     {
         $datos['mipymes'] = mypimes::paginate(5);
-        return view('mipyme.index',$datos);
+        return view('mipyme.index', $datos);
         //
     }
     /**
@@ -38,14 +38,14 @@ class MypimesController extends Controller
     public function store(Request $request)
     {
         $datosmipymes = request()->except('_token');
-        if($request->hasFile('up_image_logo'))
-        $datosmipymes['up_image_logo']=$request->file('up_image_logo')->store('uploads','public');
-        if($request->hasFile('image'))
-        $datosmipymes['image']=$request->file('image')->store('uploads','public'); 
+        if ($request->hasFile('up_image_logo'))
+            $datosmipymes['up_image_logo'] = $request->file('up_image_logo')->store('uploads', 'public');
+        if ($request->hasFile('image'))
+            $datosmipymes['image'] = $request->file('image')->store('uploads', 'public');
         mypimes::insert($datosmipymes);
         return response()->json($datosmipymes);
     }
- 
+
     /**
      * Display the specified resource.
      *

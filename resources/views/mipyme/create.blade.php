@@ -84,40 +84,41 @@
       cursor: pointer;
       margin-bottom: 5px;
     }
+
     .form-control {
-    background-color: var(--text-input-field);
-    border-radius: 8px;
-    height: 30px;
-    font-size: var(--md);
-    padding: 6px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    transition: 0.2s box-shadow ease;
-  }
-  
+      background-color: var(--text-input-field);
+      border-radius: 8px;
+      height: 30px;
+      font-size: var(--md);
+      padding: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      transition: 0.2s box-shadow ease;
+    }
+
 
     .primary-button {
       background-color: var(--hospital-green);
-    border-radius: 8px;
-    border: none;
-    color: var(--white);
-    width: 100%;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
-    margin-top: 25px;
-    text-align: center;
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+      margin-top: 25px;
+      text-align: center;
     }
 
     .combo {
       background-color: var(--text-input-field);
-    border-radius: 8px;
-    height: 50px;
-    font-size: var(--md);
-    padding: 6px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
+      border-radius: 8px;
+      height: 50px;
+      font-size: var(--md);
+      padding: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
     }
 
     .espacio {
@@ -125,35 +126,38 @@
     }
 
     .comment {
-    height: 120px;
-    background-color: var(--text-input-field);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: var(--md);
-    padding: 6px;
-    margin-bottom: 12px;
-  }
-  .form-file {
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 3%;
+      height: 120px;
+      background-color: var(--text-input-field);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: var(--md);
+      padding: 6px;
+      margin-bottom: 12px;
+    }
 
-    border: 1px solid #ccc;
-    background-color: var(--text-input-field);
-  }
+    .form-file {
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 3%;
 
-  .image_logo{
-    border-radius: 8px;
-    background-color: var(--text-input-field);
+      border: 1px solid #ccc;
+      background-color: var(--text-input-field);
+    }
 
-    border: none;
-    margin: 15px;
-  }
+    .image_logo {
+      border-radius: 8px;
+      background-color: var(--text-input-field);
+
+      border: none;
+      margin: 15px;
+    }
+
     @media (max-width: 640px) {}
   </style>
   <title>🪃MIPYMES</title>
 </head>
+
 <body>
   <div class="main">
     <div class="form-container-main">
@@ -161,10 +165,11 @@
       <h1 class="title">MIPYMES</h1>
       <h2 class="subtitle">Datos Generales</h1>
         <form class="form-main" action="{{url('/mipyme')}}" method="post" enctype="multipart/form-data">
-        @csrf
-        @include('mipyme.form');
-  </form>
+          @csrf
+          @include('mipyme.form');
+        </form>
     </div>
   </div>
 </body>
+
 </html>

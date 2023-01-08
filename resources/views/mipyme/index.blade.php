@@ -1,6 +1,6 @@
 <style>
-    .table{
-        background:red;
+    .table {
+        background: red;
     }
 </style>
 <table class="table table-light">

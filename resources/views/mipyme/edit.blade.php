@@ -132,10 +132,11 @@
       <h1 class="title">MIPYMES</h1>
       <h2 class="subtitle">Datos Generales</h1>
         <form class="form-main" action="{{url('/mipyme')}}" method="post" enctype="multipart/form-data">
-        @csrf
-        @include('mipyme.form');
-        <form>
+          @csrf
+          @include('mipyme.form');
+          <form>
     </div>
   </div>
 </body>
+
 </html>

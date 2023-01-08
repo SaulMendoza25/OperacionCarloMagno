@@ -1,105 +1,104 @@
 <div class="left">
-            <label for="RUC">RUC:</label>
-            <input type="text" name="RUC" class="form-control" id="RUC">
-            <label for="Business_name">Razon Social:</label>
-            <input type="text" name="Business_name" class="form-control" id="Business_name">
-            <label for="Trade_name">Nombre Comercial:</label>
-            <input type="text" name="Trade_name" class="form-control" id="Trade_name">
-            <label for="Number_of_collaborators">Numeros de Colaboradores:</label>
-            <input type="text" NAME="Number_of_collaborators" class="form-control" id="Number_of_collaborators">
-            <label for="Formation_of_manager">Formación del gerente o administrador:</label>
-            <select class="combo" name="Formation_of_manager" onChange="combo(this, 'demo')" id="Formation_of_manager">
-              <option value="Primaria">Primaria</option>
-              <option value="Secundaria">Secundaria</option>
-              <option value="Tercer Nivel">Tercer Nivel</option>
-              <option value="Maestria">Maestria</option>
-              <option value="Doctorado">Doctorado</option>
-            </select>
-            <label for="Address">Direccion:</label>
-            <input type="text" name="Address" class="form-control" id="Address">
-            <label for="E-mail_address">Correo Electronico:</label>
-            <input type="text" name="E_mail_address" class="form-control" id="E-mail_address">
-          </div>
-          <div class="right">
-            <label for="Province">Provincia:</label>
-            <input type="text" name="Province" class="form-control" id="Province">
-            <label for="County">Canton:</label>
-            <input type="text" name="County" class="form-control" id="County">
-            <label for="Parish">Parroquia:</label>
-            <input type="text" name="Parish" class="form-control" id="Parish">
-            <label for="Contact_telephone_number">Telefono de contactos:</label>
-            <input type="text" name="Contact telephone_number" class="form-control" id="Contact_telephone_number">
-            <label for="Owner_Legal_representative">Titular/Representante legal:</label>
-            <input type="text" name="Owner_Legal_representative" class="form-control" id="Owner/Legal_representative">
-            <label for="Gender_Representative">Genero Representante:</label>
-            <select class="combo" name="Gender_Representative" onChange="combo(this, 'demo')" id="Gender_Representative">
-              <option value="Masculino">Masculino</option>
-              <option value="Femenino">Femenino</option>
-            </select>
-          </div>
-          <div class="left">
-            <h1 class="subtitle">Actividad Comercial y Categorías</h1>
-            <label for="logo">Logo: (opcional)</label>
-            <select class="combo"  name="logo" onChange="combo(this, 'demo')" id="logo">
-              <option value="SI">SI</option>
-              <option value="NO">NO</option>
-            </select>
-            <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="form-file image_logo" id="up_image_logo" value="{{isset($mypime->up_image_logo)?$mypime->up_image_logo:''}}">
-            <label for="Number_of_establishments">Numeros de establecimientos:</label>
-            <input type="text" name="Number_of_establishments" class="form-control" id="Number_of_establishments">
-            <label for="Business_start_date">Fecha de inicio del negocio:</label>
-            <input type="date" min="1900-01-01" max="2150-01-01" name="Business_start_date" class="form-control" id="start_date" value="{{isset($mypime->Business_start_date)?$mypime->Business_start_date:''}}">
-            <label for="Category">Categoria:</label>
-            <select class="combo" name="Category" onChange="combo(this, 'demo')" id="Category">
-              <option value="Comercio">Comercio</option>
-              <option value="Servicio">Servicio</option>
-              <option value="Industrias">Industrias</option>
-              <option value="Artesanias">Artesanias</option>
-              <option value="Otros">Otros</option>
-            </select>
-          </div>
-          <div class="right">
-            <label class="Products_or_services_details" for="Products_or_services_details">Productos o servicios:</label>
-            <input type="text" name="Products_or_services_details" class="form-control" id="Products_or_services_details">
-            
-            <label for="Fair_trade_products">Producto de comercio justo:</label>
-            <select class="combo" name="Fair_trade_products" onChange="combo(this, 'demo')" id="Fair_trade_products">
-              <option value="SI">SI</option>
-              <option value="NO">NO</option>
-            </select>
-            <label for="Foreign_trade">Comercio exterior:</label>
-            <select class="combo" name="Foreign_trade" onChange="combo(this, 'demo')" id="Foreign_trade">
-              <option value="SI">SI</option>
-              <option value="NO">NO</option>
-            </select>
-          </div>
+  <label for="RUC">RUC:</label>
+  <input type="text" name="RUC" class="form-control" id="RUC">
+  <label for="Business_name">Razon Social:</label>
+  <input type="text" name="Business_name" class="form-control" id="Business_name">
+  <label for="Trade_name">Nombre Comercial:</label>
+  <input type="text" name="Trade_name" class="form-control" id="Trade_name">
+  <label for="Number_of_collaborators">Numeros de Colaboradores:</label>
+  <input type="text" NAME="Number_of_collaborators" class="form-control" id="Number_of_collaborators">
+  <label for="Formation_of_manager">Formación del gerente o administrador:</label>
+  <select class="combo" name="Formation_of_manager" onChange="combo(this, 'demo')" id="Formation_of_manager">
+    <option value="Primaria">Primaria</option>
+    <option value="Secundaria">Secundaria</option>
+    <option value="Tercer Nivel">Tercer Nivel</option>
+    <option value="Maestria">Maestria</option>
+    <option value="Doctorado">Doctorado</option>
+  </select>
+  <label for="Address">Direccion:</label>
+  <input type="text" name="Address" class="form-control" id="Address">
+  <label for="E-mail_address">Correo Electronico:</label>
+  <input type="text" name="E_mail_address" class="form-control" id="E-mail_address">
+</div>
+<div class="right">
+  <label for="Province">Provincia:</label>
+  <input type="text" name="Province" class="form-control" id="Province">
+  <label for="County">Canton:</label>
+  <input type="text" name="County" class="form-control" id="County">
+  <label for="Parish">Parroquia:</label>
+  <input type="text" name="Parish" class="form-control" id="Parish">
+  <label for="Contact_telephone_number">Telefono de contactos:</label>
+  <input type="text" name="Contact telephone_number" class="form-control" id="Contact_telephone_number">
+  <label for="Owner_Legal_representative">Titular/Representante legal:</label>
+  <input type="text" name="Owner_Legal_representative" class="form-control" id="Owner/Legal_representative">
+  <label for="Gender_Representative">Genero Representante:</label>
+  <select class="combo" name="Gender_Representative" onChange="combo(this, 'demo')" id="Gender_Representative">
+    <option value="Masculino">Masculino</option>
+    <option value="Femenino">Femenino</option>
+  </select>
+</div>
+<div class="left">
+  <h1 class="subtitle">Actividad Comercial y Categorías</h1>
+  <label for="logo">Logo: (opcional)</label>
+  <select class="combo" name="logo" onChange="combo(this, 'demo')" id="logo">
+    <option value="SI">SI</option>
+    <option value="NO">NO</option>
+  </select>
+  <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="form-file image_logo" id="up_image_logo" value="{{isset($mypime->up_image_logo)?$mypime->up_image_logo:''}}">
+  <label for="Number_of_establishments">Numeros de establecimientos:</label>
+  <input type="text" name="Number_of_establishments" class="form-control" id="Number_of_establishments">
+  <label for="Business_start_date">Fecha de inicio del negocio:</label>
+  <input type="date" min="1900-01-01" max="2150-01-01" name="Business_start_date" class="form-control" id="start_date" value="{{isset($mypime->Business_start_date)?$mypime->Business_start_date:''}}">
+  <label for="Category">Categoria:</label>
+  <select class="combo" name="Category" onChange="combo(this, 'demo')" id="Category">
+    <option value="Comercio">Comercio</option>
+    <option value="Servicio">Servicio</option>
+    <option value="Industrias">Industrias</option>
+    <option value="Artesanias">Artesanias</option>
+    <option value="Otros">Otros</option>
+  </select>
+</div>
+<div class="right">
+  <label class="Products_or_services_details" for="Products_or_services_details">Productos o servicios:</label>
+  <input type="text" name="Products_or_services_details" class="form-control" id="Products_or_services_details">
 
-          <div class="left">
-            <h1 class="subtitle">Localización georeferenciada</h1>
-            <label for="Coordinates">Cordenadas: (opcional)</label>
-            <input type="text" name="Coordinates" class="form-control" id="Coordinates">
-          </div>
-          <div class="right">
-            <label class="espacio" for="image">Imagen: (opcional)</label>
-            <input type="file" name="image" accept="image/png, image/jpeg" class="comment" id="image" value="{{isset($mypime->image)?$mypime->image:''}}">
-          </div>
-          <div class="left">
-            <h1 class="subtitle">Información Tecnológica</h1>
-            <label for="E_commerce">Comercio Electrónico:</label>
-            <input type="text" name="E_commerce" class="form-control" id="E-commerce">
-            <label for="Requires_training">Requiere Capacitaciones:(opcional)</label>
-            <input type="text" name="Requires_training" class="form-control" id="Requires_training">
-            <label for="Web_page">Página web:(opcional)</label>
-            <input type="text" name="Web_page" class="form-control" id="Web_page">
-          </div>
-          <div class="right">
-            <label class="social_media" for="social_media">Redes Sociales: (opcional)</label>
-            <input type="text" name="social_media" class="form-control" id="social_media">
-            <label for="Whatsapp">Whatsapp:</label>
-            <input type="text" name="Whatsapp" class="form-control" id="Whatsapp">
-          </div>
-          <div></div>
-          <div class="right">
-            <input class="primary-button" type="submit" value="Guardar Datos">
-           </div>
- 
+  <label for="Fair_trade_products">Producto de comercio justo:</label>
+  <select class="combo" name="Fair_trade_products" onChange="combo(this, 'demo')" id="Fair_trade_products">
+    <option value="SI">SI</option>
+    <option value="NO">NO</option>
+  </select>
+  <label for="Foreign_trade">Comercio exterior:</label>
+  <select class="combo" name="Foreign_trade" onChange="combo(this, 'demo')" id="Foreign_trade">
+    <option value="SI">SI</option>
+    <option value="NO">NO</option>
+  </select>
+</div>
+
+<div class="left">
+  <h1 class="subtitle">Localización georeferenciada</h1>
+  <label for="Coordinates">Cordenadas: (opcional)</label>
+  <input type="text" name="Coordinates" class="form-control" id="Coordinates">
+</div>
+<div class="right">
+  <label class="espacio" for="image">Imagen: (opcional)</label>
+  <input type="file" name="image" accept="image/png, image/jpeg" class="comment" id="image" value="{{isset($mypime->image)?$mypime->image:''}}">
+</div>
+<div class="left">
+  <h1 class="subtitle">Información Tecnológica</h1>
+  <label for="E_commerce">Comercio Electrónico:</label>
+  <input type="text" name="E_commerce" class="form-control" id="E-commerce">
+  <label for="Requires_training">Requiere Capacitaciones:(opcional)</label>
+  <input type="text" name="Requires_training" class="form-control" id="Requires_training">
+  <label for="Web_page">Página web:(opcional)</label>
+  <input type="text" name="Web_page" class="form-control" id="Web_page">
+</div>
+<div class="right">
+  <label class="social_media" for="social_media">Redes Sociales: (opcional)</label>
+  <input type="text" name="social_media" class="form-control" id="social_media">
+  <label for="Whatsapp">Whatsapp:</label>
+  <input type="text" name="Whatsapp" class="form-control" id="Whatsapp">
+</div>
+<div></div>
+<div class="right">
+  <input class="primary-button" type="submit" value="Guardar Datos">
+</div>

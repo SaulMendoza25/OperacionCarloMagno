@@ -14,7 +14,8 @@ class MypimesController extends Controller
      */
     public function index()
     {
-        return view('mipyme.index');
+        $datos['mipymes'] = mypimes::paginate(5);
+        return view('mipyme.index',$datos);
         //
     }
     /**
@@ -24,7 +25,7 @@ class MypimesController extends Controller
      */
     public function create()
     {
-        return view('mipyme.form');
+        return view('mipyme.create');
         //
     }
 
@@ -36,9 +37,15 @@ class MypimesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosmipymes = request()->except('_token');
+        if($request->hasFile('up_image_logo'))
+        $datosmipymes['up_image_logo']=$request->file('up_image_logo')->store('uploads','public');
+        if($request->hasFile('image'))
+        $datosmipymes['image']=$request->file('image')->store('uploads','public'); 
+        mypimes::insert($datosmipymes);
+        return response()->json($datosmipymes);
     }
-
+ 
     /**
      * Display the specified resource.
      *
@@ -79,8 +86,9 @@ class MypimesController extends Controller
      * @param  \App\Models\mypimes  $mypimes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(mypimes $mypimes)
+    public function destroy($id)
     {
-        //
+        mypimes::destroy($id);
+        return redirect('mipyme');
     }
 }

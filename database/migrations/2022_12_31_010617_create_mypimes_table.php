@@ -17,37 +17,38 @@ class CreateMypimesTable extends Migration
             $table->id(); //id se genera automaticamente
             //Datos Generales
             $table->integer('RUC')->unique();
-            $table->string('Razon_Social');
-            $table->string('nombre_comercial');
-            $table->integer('numero_de_colaboradores');
-            $table->string('direccion');
-            $table->string('Provincia');
-            $table->string('canton');
-            $table->string('parroquia');
-            $table->integer('telefono_contacto');
-            $table->string('gerente_formacion_educacional');
-            $table->string('titular_representante');
-            $table->string('correo_electronico');
-            $table->string('genero_representate');
+            $table->string('Business_name');
+            $table->string('Trade_name');
+            $table->integer('Number_of_collaborators');
+            $table->string('Formation_of_manager');
+            $table->string('Address');
+            $table->string('E_mail_address');
+
+            $table->string('Province');
+            $table->string('County');
+            $table->string('Parish');
+            $table->integer('Contact_telephone_number');
+            $table->string('Owner_Legal_representative');
+            $table->string('Gender_Representative');
             //Actividad Comercial y Categorias
             $table->string('logo')->nullable();//Opcional
-            $table->string('imagen_logo')->nullable();//Opcional 
-            $table->string('numero_de_establecimiento');
-            $table->date('fecha_inicio_negocio');
-            $table->string('categoria');
-            $table->string('producto_severcios_detalle');
-            $table->string('producto_severcios');
-            $table->string('producto_comercio_justo');
-            $table->string('comercio_exterior');
+            $table->string('up_image_logo')->nullable();//Opcional 
+            $table->string('Number_of_establishments');
+            $table->date('Business_start_date');
+            $table->string('Category');
+            //$table->string('producto_severcios_detalle');
+            $table->string('Products_or_services_details');
+            $table->string('Fair_trade_products');
+            $table->string('Foreign_trade');
             //Localicacion georeferencia
-            $table->string('coordenadas')->nullable();//Opcional 
-            $table->string('imagen_lugar');
+            $table->string('Coordinates')->nullable();//Opcional 
+            $table->string('image')->nullable();
             //Informcaion Tecnologica
-            $table->string('comercio_electronico')->nullable();//Opcional 
-            $table->string('requiere_capacitacion')->nullable();//Opcional 
-            $table->string('pagina_web')->nullable();//Opcional 
-            $table->string('redes_sociales')->nullable();//Opcional 
-            $table->string('whatsapp')->nullable();//Opcional 
+            $table->string('E-commerce')->nullable();//Opcional 
+            $table->string('Requires_training')->nullable();//Opcional 
+            $table->string('Web_page')->nullable();//Opcional 
+            $table->string('social_media')->nullable();//Opcional 
+            $table->string('Whatsapp')->nullable();//Opcional 
 
            
             

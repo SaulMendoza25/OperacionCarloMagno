@@ -63,9 +63,11 @@ class MypimesController extends Controller
      * @param  \App\Models\mypimes  $mypimes
      * @return \Illuminate\Http\Response
      */
-    public function edit(mypimes $mypimes)
+    public function edit($id)
     {
-        //
+        $mypimes = mypimes::findOrFail($id);
+       
+        return view('mipyme.edit', compact('mypimes'));
     }
 
     /**

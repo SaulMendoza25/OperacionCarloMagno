@@ -67,7 +67,7 @@
             <td>{{$value->Web_page}}</td>
             <td>{{$value->social_media}}</td>
             <td>{{$value->Whatsapp}}</td>
-            <td> <a href="{{url('/emprendimiento/' .$value->id. '/edit')}}">Editar</a> | <form action="{{'/mipyme/'.$value->id }}" method="post">
+            <td> <a href="{{url('/mipyme/' .$value->id. '/edit')}}">Editar</a> | <form action="{{'/mipyme/'.$value->id }}" method="post">
                     @csrf
                     {{method_field('DELETE') }}
                     <input type="submit" onclick="return confirm('Deseas realmente borrar?')" value="Borrar">

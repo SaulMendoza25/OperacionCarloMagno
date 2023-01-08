@@ -44,7 +44,7 @@ class CreateMypimesTable extends Migration
             $table->string('Coordinates')->nullable();//Opcional 
             $table->string('image')->nullable();
             //Informcaion Tecnologica
-            $table->string('E-commerce')->nullable();//Opcional 
+            $table->string('E_commerce')->nullable();//Opcional 
             $table->string('Requires_training')->nullable();//Opcional 
             $table->string('Web_page')->nullable();//Opcional 
             $table->string('social_media')->nullable();//Opcional 

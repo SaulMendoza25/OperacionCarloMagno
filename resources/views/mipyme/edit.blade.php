@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -172,7 +173,7 @@
         <form class="form-main" action="{{url('/mipyme')}}" method="post" enctype="multipart/form-data">
           @csrf
           @include('mipyme.form');
-          <form>
+  </form>
     </div>
   </div>
 </body>

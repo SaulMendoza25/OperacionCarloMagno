@@ -37,7 +37,9 @@
             <td>{{$value->phone_number}}</td>
             <td>{{$value->email}}</td>
             <td>{{$value->main_products}}</td>
-            <td>{{$value->up_image_main_products}}</td>
+
+            <td><img src="{{asset('storage'). '/' . $value->up_image_main_products}}">
+                {{$value->up_image_main_products}}</td>
             <td>{{$value->main_service}}</td>
             <td>{{$value->main_investment_source}}</td>
             <td>{{$value->principal_investment_range}}</td>

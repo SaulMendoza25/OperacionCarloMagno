@@ -170,8 +170,10 @@
       <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
       <h1 class="title">🏆EMPRENDIMIENTO</h1>
       <h2 class="subtitle">Datos del proyecto emprendimiento</h1>
-        <form class="form-main" action="{{url ('/emprendimiento')}}" method="post" enctype="multipart/form-data">
-          @include('emprendimiento.form');
+        <form class="form-main" action="{{url ('/emprendimiento/'. $emprendimiento->id)}}" method="post" enctype="multipart/form-data">
+        @csrf
+        {{method_field('PATCH') }}
+        @include('emprendimiento.form');
         <form>
     </div>
   </div>

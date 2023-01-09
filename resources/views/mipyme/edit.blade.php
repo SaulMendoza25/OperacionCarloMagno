@@ -170,9 +170,10 @@
       <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
       <h1 class="title">MIPYMES</h1>
       <h2 class="subtitle">Datos Generales</h1>
-        <form class="form-main" action="{{url('/mipyme')}}" method="post" enctype="multipart/form-data">
+        <form class="form-main" action="{{url('/mipyme/'. $mypimes->id)}}" method="post" enctype="multipart/form-data">
           @csrf
-          @include('mipyme.form');
+          {{method_field('PATCH') }}
+          @include('mipyme.form')
   </form>
     </div>
   </div>

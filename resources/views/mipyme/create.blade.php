@@ -171,7 +171,7 @@
       <h2 class="subtitle">Datos Generales</h1>
         <form class="form-main" action="{{url('/mipyme')}}" method="post" enctype="multipart/form-data">
           @csrf
-          @include('mipyme.form');
+          @include('mipyme.form')
         </form>
     </div>
   </div>

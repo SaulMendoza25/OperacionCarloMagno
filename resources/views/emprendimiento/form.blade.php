@@ -38,6 +38,7 @@
   <div class="PRP-DIV">
     <input name="main_products" cols="40" rows="5" class="comment" id="main_products" value="{{isset($emprendimiento->main_products)?$emprendimiento->main_products:''}}">
     <input type="file" name="up_image_main_products" accept="image/png, image/jpeg" class="form-file" id="up_image_main_products" value="{{isset($emprendimiento->up_image_main_products)?$emprendimiento->up_image_main_products:''}}">
+    <img src="{{isset($emprendimiento)?asset('storage'). '/' . $emprendimiento->up_image_main_products:''}}" alt="">
   </div>
   <label for="main_service">Servicios Principales</label>
   <input type="text" name="main_service" cols="40" rows="5" class="comment" id="main_service" value="{{isset($emprendimiento->main_service)?$emprendimiento->main_service:''}}">

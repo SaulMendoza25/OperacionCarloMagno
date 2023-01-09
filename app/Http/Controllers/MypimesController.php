@@ -77,9 +77,12 @@ class MypimesController extends Controller
      * @param  \App\Models\mypimes  $mypimes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, mypimes $mypimes)
+    public function update(Request $request, $id)
     {
-        //
+        $datosmipymes = request()->except(['_token','_method']);
+        mypimes::where('id','=',$id)->update($datosmipymes);
+        $mypimes = mypimes::findOrFail($id);
+        return view('mipyme.edit', compact('mypimes'));
     }
 
     /**

@@ -74,7 +74,6 @@
     <option value="NO">NO</option>
   </select>
 </div>
-
 <div class="left">
   <h1 class="subtitle">Localización georeferenciada</h1>
   <label for="Coordinates">Cordenadas: (opcional)</label>

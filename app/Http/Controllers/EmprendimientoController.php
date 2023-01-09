@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class EmprendimientoController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -57,7 +59,7 @@ class EmprendimientoController extends Controller
         emprendimiento::insert($datosemprendimiento);
         return response()->json($datosemprendimiento);
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -88,9 +90,37 @@ class EmprendimientoController extends Controller
      * @param  \App\Models\emprendimiento  $emprendimiento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, emprendimiento $emprendimiento)
+    public function update(Request $request, $id)
     {
-        //
+         function validateSize(){
+            $datosemprendimiento = request()->except(['_token','_method']);
+            $sizePDF=filesize($request->file('upload_proyect'));
+            $sizelogo=filesize($request->file('up_image_logo'));
+            $size_product=filesize($request->file('up_image_logo'));
+            $validate=true;
+            if ($sizePDF>50 || $sizelogo>50 || $size_product>50){
+                echo 'si son mayores';
+                $validate=false;
+                return  'si son mayores';
+            }
+            return   'si son mayores';
+        }
+        $datosemprendimiento = request()->except(['_token','_method']);
+        if ($request->hasFile('upload_proyect'))
+            $datosemprendimiento['upload_proyect'] = $request->file('upload_proyect')->store('uploads-PDF', 'public');
+           
+            
+        if ($request->hasFile('up_image_logo'))
+            $datosemprendimiento['up_image_logo'] = $request->file('up_image_logo')->store('uploads', 'public');
+           
+            if ($request->hasFile('up_image_main_products'))
+            $datosemprendimiento['up_image_main_products'] = $request->file('up_image_main_products')->store('uploads', 'public');
+        if ($request->hasFile('up_image_main_mark'))
+            $datosemprendimiento['up_image_main_mark'] = $request->file('up_image_main_mark')->store('uploads', 'public');
+
+        emprendimiento::where('id','=',$id)->update($datosemprendimiento);
+        $emprendimiento = emprendimiento::findOrFail($id);
+        return view('emprendimiento.edit', compact('emprendimiento'));
     }
 
     /**
@@ -104,4 +134,6 @@ class EmprendimientoController extends Controller
         emprendimiento::destroy($id);
         return redirect('emprendimiento');
     }
+
+
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\mypimes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MypimesController extends Controller
 {
@@ -80,10 +81,17 @@ class MypimesController extends Controller
     public function update(Request $request, $id)
     {
         $datosmipymes = request()->except(['_token','_method']);
-        if ($request->hasFile('up_image_logo'))
-        $datosmipymes['up_image_logo'] = $request->file('up_image_logo')->store('uploads', 'public');
-        if ($request->hasFile('image'))
+        if ($request->hasFile('up_image_logo')){
+            $deleteOldImageLogo=mypimes::findOrFail($id);
+            Storage::delete('public/'.$deleteOldImageLogo->up_image_logo);
+            $datosmipymes['up_image_logo'] = $request->file('up_image_logo')->store('uploads', 'public');
+           
+        }
+        if ($request->hasFile('image')){
+        $deleteOldImage=mypimes::findOrFail($id);
+        Storage::delete('public/'.$deleteOldImage->image);
         $datosmipymes['image'] = $request->file('image')->store('uploads', 'public');
+        }
         mypimes::where('id','=',$id)->update($datosmipymes);
         $mypimes = mypimes::findOrFail($id);
         return view('mipyme.edit', compact('mypimes'));

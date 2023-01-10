@@ -128,7 +128,13 @@ class EmprendimientoController extends Controller
      */
     public function destroy($id)
     {
+        $emprendimiento = emprendimiento::findOrFail($id);
+        Storage::delete('public/'.$emprendimiento->upload_proyect);
+        Storage::delete('public/'.$emprendimiento->up_image_logo);
+        Storage::delete('public/'.$emprendimiento->up_image_main_products);
+        Storage::delete('public/'.$emprendimiento->up_image_main_mark);
         emprendimiento::destroy($id);
+                
         return redirect('emprendimiento');
     }
     function validateSize(){

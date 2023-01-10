@@ -1,3 +1,5 @@
+
+@section('content')
 <div class="left">
   <label for="name_proyect">Nombre del proyecto:</label>
   <input type="text" name="name_proyect" class="form-control" id="name_proyect" value="{{isset($emprendimiento->name_proyect)?$emprendimiento->name_proyect:''}}">
@@ -54,6 +56,8 @@
   <img src="{{isset($emprendimiento)?asset('storage'). '/' . $emprendimiento->up_image_main_mark:''}}" alt="">
   <label for="number_employees">Numero de Empleados:</label>
   <input type="text" name="number_employees" class="form-control" id="number_employees" value="{{isset($emprendimiento->number_employees)?$emprendimiento->number_employees:''}}">
-  <input class="primary-button" type="submit" value="Guardar Datos">
-
+  <div class="buttons">
+  <input class="second-button" type="submit" value="Guardar Datos">
+  <a href="{{url('emprendimiento/')}}"  class="second-button">Volver</a>
+  </div>
 </div>

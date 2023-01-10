@@ -105,6 +105,9 @@ class MypimesController extends Controller
      */
     public function destroy($id)
     {
+        $mypimes = mypimes::findOrFail($id);
+        Storage::delete('public/'.$mypimes->up_image_logo);
+        Storage::delete('public/'.$mypimes->image);
         mypimes::destroy($id);
         return redirect('mipyme');
     }

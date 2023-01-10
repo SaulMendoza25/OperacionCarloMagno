@@ -44,6 +44,8 @@
     <option value="SI">SI</option>
     <option value="NO">NO</option>
   </select>
+  <img src="{{isset($mypimes)?asset('storage'). '/' . $mypimes->up_image_logo:''}}" alt="">
+  
   <input type="file" name="up_image_logo" accept="image/png, image/jpeg" class="comment" id="up_image_logo" value="{{isset($mypimes->up_image_logo)?$mypimes->up_image_logo:''}}">
   <label for="Number_of_establishments">Numeros de establecimientos:</label>
   <input type="text" name="Number_of_establishments" class="form-control" id="Number_of_establishments" value="{{isset($mypimes->Number_of_establishments)?$mypimes->Number_of_establishments:''}}">
@@ -82,6 +84,8 @@
 <div class="right1">
   <label class="espacio" for="image">Imagen: (opcional)</label>
   <input type="file" name="image" accept="image/png, image/jpeg" class="comment" id="image" value="{{isset($mypimes->image)?$mypimes->image:''}}">
+  <img src="{{isset($mypimes)?asset('storage'). '/' . $mypimes->image:''}}" alt="">
+
 </div>
 <div class="left">
   <h1 class="subtitle">Información Tecnológica</h1>

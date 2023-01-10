@@ -19,7 +19,9 @@
       --md: 16px;
       --lg: 25px;
     }
-
+    img{
+        width: 100px;
+    }
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;

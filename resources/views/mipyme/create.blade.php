@@ -149,15 +149,15 @@
       border: 1px solid #ccc;
       background-color: var(--text-input-field);
     }
-
     .image_logo {
       border-radius: 8px;
       background-color: var(--text-input-field);
-
       border: none;
       margin: 15px;
     }
-
+    img{
+        width: 100px;
+    }
     @media (max-width: 640px) {}
   </style>
   <title>🪃MIPYMES</title>

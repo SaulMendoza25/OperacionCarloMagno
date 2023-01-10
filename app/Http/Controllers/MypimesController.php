@@ -80,6 +80,10 @@ class MypimesController extends Controller
     public function update(Request $request, $id)
     {
         $datosmipymes = request()->except(['_token','_method']);
+        if ($request->hasFile('up_image_logo'))
+        $datosmipymes['up_image_logo'] = $request->file('up_image_logo')->store('uploads', 'public');
+        if ($request->hasFile('image'))
+        $datosmipymes['image'] = $request->file('image')->store('uploads', 'public');
         mypimes::where('id','=',$id)->update($datosmipymes);
         $mypimes = mypimes::findOrFail($id);
         return view('mipyme.edit', compact('mypimes'));

@@ -160,7 +160,9 @@
   #theme_require_trainings {
     display: none;
   }
-
+  img{
+        width: 100px;
+    }
   @media (max-width: 640px) {}
 </style>
 

@@ -15,7 +15,7 @@ use App\Http\Controllers\EmprendimientoController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 /*Route::get('/formulario', function () {
     return view('mipyme.form');
@@ -24,3 +24,6 @@ Route::get('/', function () {
 
 Route::resource('mipyme',MypimesController::class);
 Route::resource('emprendimiento',EmprendimientoController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

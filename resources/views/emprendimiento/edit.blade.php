@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -181,6 +182,10 @@
       text-decoration: none;
       margin-left:20px
     }
+    .buttons{
+      display:flex;
+
+    }
   @media (max-width: 640px) {}
 </style>
 
@@ -189,11 +194,14 @@
     <div class="form-container-main">
       <img class="logo" src="https://deone.com.ec/wp-content/uploads/2022/07/marca-DeOne.com_.ec_-1-1024x688.png" alt="logo de la marca DeOne">
       <h1 class="title">🏆EMPRENDIMIENTO</h1>
+      @if(Session::has('mensaje'))
+      <h3 class="title">{{ Session::get('mensaje')}}</h1>
+      @endif 
       <h2 class="subtitle">Datos del proyecto emprendimiento</h1>
         <form class="form-main" action="{{url ('/emprendimiento/'. $emprendimiento->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         {{method_field('PATCH') }}
-        @include('emprendimiento.form');
+        @include('emprendimiento.form',['modo'=>'Editar']);
         <form>
     </div>
   </div>

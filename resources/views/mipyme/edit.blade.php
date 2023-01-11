@@ -160,7 +160,28 @@
       border: none;
       margin: 15px;
     }
+    .second-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 200px;
+      line-height: 50px;
+      display: block;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+      margin-top: 5px;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      margin-left:20px
+    }
+    .buttons{
+      display:flex;
 
+    }
     @media (max-width: 640px) {}
   </style>
   <title>🪃MIPYMES</title>

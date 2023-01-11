@@ -57,7 +57,7 @@
   <label for="number_employees">Numero de Empleados:</label>
   <input type="text" name="number_employees" class="form-control" id="number_employees" value="{{isset($emprendimiento->number_employees)?$emprendimiento->number_employees:''}}">
   <div class="buttons">
-  <input class="second-button" type="submit" value="Guardar Datos">
+  <input class="second-button" type="submit" value="{{$modo}}">
   <a href="{{url('emprendimiento/')}}"  class="second-button">Volver</a>
   </div>
 </div>

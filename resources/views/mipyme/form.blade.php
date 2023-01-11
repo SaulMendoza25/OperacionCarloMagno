@@ -101,5 +101,8 @@
   <input type="text" name="social_media" class="form-control" id="social_media" value="{{isset($mypimes->social_media)?$mypimes->social_media:''}}">
   <label for="Whatsapp">Whatsapp:</label>
   <input type="text" name="Whatsapp" class="form-control" id="Whatsapp" value="{{isset($mypimes->Whatsapp)?$mypimes->Whatsapp:''}}">
-  <input class="primary-button" type="submit" value="Guardar Datos">
+  <div class="buttons">
+  <input class="second-button" type="submit" value="Guardar Datos">
+  <a href="{{url('emprendimiento/')}}"  class="second-button">Volver</a>
+  </div>
 </div>

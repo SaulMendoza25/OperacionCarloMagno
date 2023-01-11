@@ -26,12 +26,12 @@
       border: none;
       color: var(--white);
       width: 200px;
-      line-height: 50px;
+      line-height: 25px;
       display: block;
       cursor: pointer;
       font-size: var(--md);
       font-weight: bold;
-      height: 50px;
+      height: 25px;
       margin-top: 5px;
       text-align: center;
       display: block;
@@ -46,7 +46,7 @@
       cursor: pointer;
       font-size: var(--md);
       font-weight: bold;
-      height: 50px;
+      height: 25px;
       margin-top: 5px;
       text-align: center;
     }
@@ -65,7 +65,7 @@
     
  }
  .table thead tr {
-    background-color: #009879;
+    background-color: var(--hospital-green);
     color: white;
     text-align: left;
     text-align: center;
@@ -74,24 +74,24 @@
     padding: 12px 15px;
 }
 .table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid var(--hospital-green);
 }
 .table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: var(--hospital-green);
 }
 
 .table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid var(--hospital-green);
 }
 .table tbody tr.active-row {
     font-weight: bold;
-    color: #009879;
+    color: var(--hospital-green);
 }
 
 
 </style>
 <body>
-@section('content')
+<a href="{{url('mipyme/create')}}" class="primary-button" value="">Nuevo Formulario</a>
 <table class="table table-light">
     <thead class="thead-light">
         <tr>

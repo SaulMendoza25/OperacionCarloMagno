@@ -196,7 +196,7 @@
       <h2 class="subtitle">Datos del proyecto emprendimiento</h1>
         <form class="form-main" action="{{url ('/emprendimiento')}}" method="post" enctype="multipart/form-data">
           @csrf
-          @include('emprendimiento.form');
+          @include('emprendimiento.form',['modo'=>'Crear']);
           <form>
     </div>
   </div>

@@ -57,7 +57,7 @@ class EmprendimientoController extends Controller
             $datosemprendimiento['up_image_main_mark'] = $request->file('up_image_main_mark')->store('uploads', 'public');
 
         emprendimiento::insert($datosemprendimiento);
-        return response()->json($datosemprendimiento);
+        return redirect('home')->with('mensaje','Emprendedor Agregado con exito🏆');
     }
     
     /**
@@ -117,6 +117,7 @@ class EmprendimientoController extends Controller
             }
         emprendimiento::where('id','=',$id)->update($datosemprendimiento);
         $emprendimiento = emprendimiento::findOrFail($id);
+        redirect('emprendimiento.edit')->with('mensaje','Cambios Realizados Existosamente');
         return view('emprendimiento.edit', compact('emprendimiento'));
     }
 

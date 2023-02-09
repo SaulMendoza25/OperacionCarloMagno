@@ -46,7 +46,7 @@ class EmprendimientoController extends Controller
         if ($request->hasFile('upload_proyect'))
 
             $datosemprendimiento['upload_proyect'] = $request->file('upload_proyect')->store('uploads-PDF', 'public');
-        $mamstes = "la cantidad de byte es: " . filesize($request->file('upload_proyectk'));
+       
         if ($request->hasFile('up_image_logo'))
             $datosemprendimiento['up_image_logo'] = $request->file('up_image_logo')->store('uploads', 'public');
 
@@ -82,7 +82,10 @@ class EmprendimientoController extends Controller
         $emprendimiento = emprendimiento::findOrFail($id);
         return view('emprendimiento.edit', compact('emprendimiento'));
     }
-
+    public function editUser($email){
+        $emprendimiento = emprendimiento::findOrFail($email);
+        return view('emprendimientoUser', compact('emprendimiento'));
+    }
     /**
      * Update the specified resource in storage.
      *

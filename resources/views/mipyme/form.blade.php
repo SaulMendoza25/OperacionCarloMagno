@@ -17,8 +17,8 @@
   </select>
   <label for="Address">Direccion:</label>
   <input type="text" name="Address" class="form-control" id="Address" value="{{isset($mypimes->Address)?$mypimes->Address:''}}">
-  <label for="E-mail_address">Correo Electronico:</label>
-  <input type="text" name="E_mail_address" class="form-control" id="E-mail_address" value="{{isset($mypimes->E_mail_address)?$mypimes->E_mail_address:''}}">
+  <label for="email">Correo Electronico:</label>
+  <input type="text" name="email" class="form-control" id="email" value="{{isset($mypimes->E_mail_address)?$mypimes->E_mail_address:''}}">
 </div>
 <div class="right1">
   <label for="Province">Provincia:</label>

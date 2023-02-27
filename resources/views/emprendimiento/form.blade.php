@@ -42,7 +42,7 @@
   <label for="main_products">Productos Principales (JPEG/PNG):</label>
   <div class="PRP-DIV">
     <input name="main_products" cols="40" rows="5" class="comment" id="main_products" value="{{isset($emprendimiento->main_products)?$emprendimiento->main_products:''}}">
-    <input type="file" name="up_image_main_products" accept="image/png, image/jpeg" class="form-file" id="up_image_main_products" value="{{isset($emprendimiento->up_image_main_products)?$emprendimiento->up_image_main_products:''}}">
+    <input type="file" name="up_image_main_products" accept="image/png, image/jpeg image/JPG" class="form-file" id="up_image_main_products" value="{{isset($emprendimiento->up_image_main_products)?$emprendimiento->up_image_main_products:''}}">
     <img src="{{isset($emprendimiento)?asset('storage'). '/' . $emprendimiento->up_image_main_products:''}}" alt="">
   </div>
   <label for="main_service">Servicios Principales</label>
@@ -52,7 +52,7 @@
   <label for="principal_investment_range">Rango de Inversion Principal:</label>
   <input type="text" name="principal_investment_range" class="form-control" id="principal_investment_range" value="{{isset($emprendimiento->principal_investment_range)?$emprendimiento->principal_investment_range:''}}">
   <label for="mark">Marca (JPEG/PNG):</label>
-  <input type="file" name="up_image_main_mark" accept="image/png, image/jpeg" class="form-file" id="mark" value="{{isset($emprendimiento->up_image_main_mark)?$emprendimiento->up_image_main_mark:''}}">
+  <input type="file" name="up_image_main_mark" accept="image/png, image/jpeg  image/JPG" class="form-file" id="mark" value="{{isset($emprendimiento->up_image_main_mark)?$emprendimiento->up_image_main_mark:''}}">
   <img src="{{isset($emprendimiento)?asset('storage'). '/' . $emprendimiento->up_image_main_mark:''}}" alt="">
   <label for="number_employees">Numero de Empleados:</label>
   <input type="text" name="number_employees" class="form-control" id="number_employees" value="{{isset($emprendimiento->number_employees)?$emprendimiento->number_employees:''}}">

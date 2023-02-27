@@ -44,7 +44,8 @@ class MypimesController extends Controller
         if ($request->hasFile('image'))
             $datosmipymes['image'] = $request->file('image')->store('uploads', 'public');
         mypimes::insert($datosmipymes);
-        return response()->json($datosmipymes);
+        return redirect('mipyme')->with('mensaje','mypime Agregado con exito🏆');
+
     }
 
     /**

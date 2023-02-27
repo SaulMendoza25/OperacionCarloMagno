@@ -88,9 +88,21 @@
     font-weight: bold;
     color: #009879;
 }
+.button{
+    display: flex;
+    margin-left: 5px;
+}
+.calseta{
+    margin: 5px;
+}
 </style>
-<body>    
-<a href="{{url('emprendimiento/create')}}" class="primary-button" value="">Nuevo Formulario</a>
+<body>
+
+<div class="button">  
+<a href="{{url('emprendimiento/create')}}" class="primary-button calseta" value="">Nuevo Formulario</a>
+<a href="{{url('mipyme')}}" class="primary-button calseta" value="" >Tabla de Mypimes</a>
+<a href="{{route('logout')}}" class="primary-button calseta" type="button" value="" >Cerrar Sesion</a>
+</div>  
 <table class="table table-light">
     <thead class="thead-light">
         <tr>

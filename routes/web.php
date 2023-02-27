@@ -29,7 +29,7 @@ Route::view('/mypimeUser',"mypimeUser")->middleware('auth')->name('mypimeUser');
 Route::view('/privada',"secret")->middleware('auth')->name('privada');
 Route::post('/validar-registro',[LoginController::class,'register'])->name('validar-registro');
 Route::post('/iniciar-sesion',[LoginController::class,'login'])->name('iniciar-sesion');
-Route::post('/logout',[LoginController::class,'logout'])->name('logout');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 
 
 

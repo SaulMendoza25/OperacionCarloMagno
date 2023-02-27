@@ -18,15 +18,13 @@ class LoginController extends Controller
      */
     public function register(Request $request){
        // validar los datos
-        $emprendimiento=new emprendimiento();
-        $mypime=new mypimes();
-        $user->name=$request->name;
-        $user->email=$request->email;
-        $user->password=Hash::make($request->password);
-        $user->save();
-        Auth::login($user);
-        return redirect(route('emprendimiento.index'));
-
+       $user=new User();
+       $user->name=$request->name;
+       $user->email=$request->email;
+       $user->password=Hash::make($request->password);
+       $user->save();
+       Auth::login($user);
+       return redirect()->intended(route('login'));
 
     }
        /**
@@ -43,7 +41,7 @@ class LoginController extends Controller
         $remember=($request->has('remember')?true:false);
         if(Auth::attempt($credentials,$remember)){
             $request->session()->regenerate();
-            return redirect()->intended(route('emprendimientoUser'), compact('$credentials.email'));
+            return redirect()->intended(route('emprendimiento.index'));
         }
         else{
             return redirect('login');

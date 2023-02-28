@@ -17,29 +17,29 @@ class CreateMypimesTable extends Migration
             $table->id(); //id se genera automaticamente
             //Datos Generales
             $table->integer('RUC')->unique();
-            $table->string('Business_name');
-            $table->string('Trade_name');
-            $table->integer('Number_of_collaborators');
-            $table->string('Formation_of_manager');
-            $table->string('Address');
-            $table->string('E_mail_address');
+            $table->string('Business_name')->nullable();
+            $table->string('Trade_name')->nullable();
+            $table->integer('Number_of_collaborators')->nullable();
+            $table->string('Formation_of_manager')->nullable();
+            $table->string('Address')->nullable();
+            $table->string('email')->nullable();
 
-            $table->string('Province');
-            $table->string('County');
-            $table->string('Parish');
-            $table->integer('Contact_telephone_number');
-            $table->string('Owner_Legal_representative');
-            $table->string('Gender_Representative');
+            $table->string('Province')->nullable();
+            $table->string('County')->nullable();
+            $table->string('Parish')->nullable();
+            $table->integer('Contact_telephone_number')->nullable();
+            $table->string('Owner_Legal_representative')->nullable();
+            $table->string('Gender_Representative')->nullable();
             //Actividad Comercial y Categorias
             $table->string('logo')->nullable();//Opcional
             $table->string('up_image_logo')->nullable();//Opcional 
-            $table->string('Number_of_establishments');
-            $table->date('Business_start_date');
-            $table->string('Category');
+            $table->string('Number_of_establishments')->nullable();
+            $table->date('Business_start_date')->nullable();
+            $table->string('Category')->nullable();
             //$table->string('producto_severcios_detalle');
-            $table->string('Products_or_services_details');
-            $table->string('Fair_trade_products');
-            $table->string('Foreign_trade');
+            $table->string('Products_or_services_details')->nullable();
+            $table->string('Fair_trade_products')->nullable();
+            $table->string('Foreign_trade')->nullable();
             //Localicacion georeferencia
             $table->string('Coordinates')->nullable();//Opcional 
             $table->string('image')->nullable();
@@ -49,9 +49,6 @@ class CreateMypimesTable extends Migration
             $table->string('Web_page')->nullable();//Opcional 
             $table->string('social_media')->nullable();//Opcional 
             $table->string('Whatsapp')->nullable();//Opcional 
-
-           
-            
             //
             //
             $table->rememberToken();

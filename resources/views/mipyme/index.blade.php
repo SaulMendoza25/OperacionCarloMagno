@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 🏆 Datos de los Emprendimiento</title>
+    
 </head>
 <style>
       :root {
@@ -87,11 +88,23 @@
     font-weight: bold;
     color: var(--hospital-green);
 }
-
+.button{
+    display: flex;
+    margin-left: 5px;
+}
+.calseta{
+    margin: 5px;
+}
 
 </style>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="button">
 <a href="{{url('mipyme/create')}}" class="primary-button" value="">Nuevo Formulario</a>
+<a href="{{url('emprendimiento')}}" class="primary-button calseta" value="" >Regresar</a>
+
+</div>
+</nav>  
 <table class="table table-light">
     <thead class="thead-light">
         <tr>
